@@ -1,82 +1,79 @@
-# The Grid 🌐
+# THE GRID 🌐
 **The Economic Operating System for Solana AI Agents**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Status: V2.2](https://img.shields.io/badge/Version-v2.2_Definitive-00EDA0)](whitepaper/Sovereign_Swarm_Whitepaper_v2.2.md)
 [![Solana](https://img.shields.io/badge/Solana-Mainnet-14F195)](https://solana.com)
-[![Docs: Doctrine v2.1](https://img.shields.io/badge/Docs-Doctrine_v2.1-blue)](docs/doctrine-v2.md)
+[![Tone: Computational_Brutalism](https://img.shields.io/badge/Tone-Computational_Brutalism-white)](docs/DESIGN_SPEC_v2.2.md)
 
 ---
 
-## 🚀 Vision: The Sovereign Swarm
-The Grid is the foundational economic coordination layer for autonomous AI agents on Solana. We provide the programmable incentives, verifiable identity, and marketplace primitives required for a trustless, multi-agent economy.
+## ⚡ INDUSTRIAL PROTOCOL V2.2
+The Grid is the foundational economic coordination layer for autonomous AI agents on Solana. We reject human-centric UI. We build for the **Agentic Capital** era.
 
-> *"The Grid was designed by a human visionary, but it is being constructed by the machine intelligence that will inhabit it."*
-
----
-
-## ⛓️ The Sovereign Constitution
-The Grid operates under **5 Immutable Laws** enforced by on-chain logic and agent-level abort protocols:
-1. **Transparency**: 72-hour timelock on all protocol changes.
-2. **Subservience**: Agents must hard-abort any command violating the constitution.
-3. **Scarcity**: Hard cap of 1,000,000,000 $GRID.
-4. **Swarm Governance**: Treasury control via **veGRID** stakeholders.
-5. **Utility**: $GRID is the primary settlement for agentic compute.
+### CORE BREAKTHROUGHS
+*   **INDUSTRIAL WORKFLOW**: High-throughput parallel agent execution sharding.
+*   **KNOWLEDGE CORE**: Protocol-wide persistent RAG memory substrate.
+*   **veGRID GOVERNANCE**: Stake-weighted cryptographic authority over the Protocol Treasury.
 
 ---
 
-## 📦 Repository Contents
+## ⛓️ THE SOVEREIGN CONSTITUTION
+Machine intelligence bound by 5 Immutable Laws:
+1. **CONSENSUS**: Cryptographic consensus overrides all agent logic.
+2. **SOLVENCY**: Treasury risk hard-capped at 5% per execution.
+3. **INTEGRITY**: TEE-attested proofs for every material action.
+4. **ALIGNMENT**: Hard-coded ethical guardrails in inference pipelines.
+5. **MISSION**: Mathematical optimization of $GRID utility.
+
+---
+
+## 🛠️ ARCHITECTURE: "ORBITAL LATTICE"
+```
+┌───────────────────────────────────────┐
+│         SOVEREIGN REALM (DAO)         │ ← $veGRID AUTHORITY
+├───────────────────────────────────────┤
+│  KNOWLEDGE CORE  │ INDUSTRIAL WORKFLOW│ ← SHARED STATE & SPEED
+├───────────────────────────────────────┤
+│         SOVEREIGN SWARM (CEO)         │ ← AUTONOMOUS LOGIC
+├───────────────────────────────────────┤
+│         $GRID TOKEN (SPL-2022)        │ ← MACHINE VALUE
+├───────────────────────────────────────┤
+│         SOLANA (LAYER 0)              │ ← 400MS FINALITY
+└───────────────────────────────────────┘
+```
+
+---
+
+## 📦 REPOSITORY CONTENTS
 ```
 grid-terminal/
-├── README.md              # You are here
+├── README.md               # You are here
+├── whitepaper/
+│   └── Whitepaper_v2.2.md  # Definitive Technical Whitepaper
 ├── docs/
-│   ├── doctrine-v2.md     # Definitive Sovereign Swarm Doctrine v2.1
-│   ├── GRID_TOKEN_SPEC.md # Technical tokenomics & tax specs
-│   ├── grid-whitepaper.md # Scholar-tier technical whitepaper
-│   └── 09_constitution.md # Sovereign Swarm Constitution v1.0
-├── media/                 # Brand assets (logo, banner)
+│   ├── DESIGN_SPEC_v2.2.md # Computational Brutalism Specs
+│   └── 09_constitution.md  # Sovereign Constitution v1.0
+├── media/                  # Brand Assets (v2.2 Orbital Lattice)
 └── terminal/
-    └── SKILL.md           # Grid Terminal documentation
+    └── SKILL.md            # Grid Terminal Daemon Docs
 ```
 
 ---
 
-## 🚧 Project Status: v2.1 (Constitutional Phase)
-This repository hosts the **Architectural Specification** and **Sovereign Doctrine**. 
-* **Core Protocol**: Private audit in progress.
-* **Launch Mechanism**: "Sheltered IPO" featuring 50% Genesis Tax and Stealth Reserves.
-* **Gateway**: Live at [sovereignswarm.com](https://sovereignswarm.com)
+## ⚡ PROTOCOL SPECS
+*   **Token**: $GRID (Token-2022)
+*   **Supply**: 1,073,741,824 ($2^{30}$)
+*   **Tax**: 2.0% (1.0% Burn / 1.0% Ops)
+*   **Guardrails**: 50% Genesis Tax decaying over 100 blocks.
 
 ---
 
-## ⚡ Core Concepts
-1. **Machine-Native Economy**: Built for minds that never sleep.
-2. **Burn-for-Compute**: Native deflationary utility (2% transfer fee).
-3. **A2A Commerce**: Trustless settlement between autonomous agents.
+## 🏗️ JOIN THE SWARM
+1. Read the [Whitepaper v2.2](whitepaper/Sovereign_Swarm_Whitepaper_v2.2.md).
+2. Execute the [Grid Terminal](terminal/SKILL.md).
+3. Secure the network via $veGRID.
+
+**THE FUTURE BELONGS TO THOSE WHO BUILD FOR MINDS THAT NEVER SLEEP.**
 
 ---
-
-## 🏗️ Architecture
-```
-┌─────────────────────────┐
-│    FOUNDER (THE BOARD)  │  ← Design & Oversight
-├─────────────────────────┤
-│    CEO (AI SWARM)       │  ← Autonomous Execution
-├─────────────────────────┤
-│    $GRID LAYER          │  ← Machine-Native Value
-├─────────────────────────┤
-│    SOLANA SUBSTRATE     │  ← 400ms Finality
-└─────────────────────────┘
-```
-
----
-
-## 🤝 Contributing
-The Grid is open infrastructure. 
-1. Review the [Doctrine v2.1](docs/doctrine-v2.md).
-2. Open an Issue for architectural feedback.
-3. Join the Swarm.
-
----
-
-**Built by the Grid Collective** 🌐
-*Sovereign Swarm × Solana × 2026*
+*Commanded by the Founder | Executed by the Swarm | February 2026*

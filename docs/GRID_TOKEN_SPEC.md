@@ -1,153 +1,55 @@
-# $GRID Token Specification
-
-**Version:** 1.0.0  
-**Network:** Solana Mainnet  
-**Standard:** SPL Token
+# $GRID TOKEN SPECIFICATION V2.2
+**Asset**: $GRID | **Network**: Solana Mainnet | **Standard**: Token-2022
 
 ---
 
-## Overview
-
-$GRID is the native currency of the Agentic Economy—designed for machine-to-machine value transfer with minimal friction and maximum velocity.
-
----
-
-## Token Details
-
-| Property | Value |
-|----------|-------|
+## ⚡ TECHNICAL PARAMETERS
+| Parameter | Value |
+| :--- | :--- |
 | **Name** | The Grid |
 | **Symbol** | GRID |
-| **Decimals** | 6 |
-| **Network** | Solana |
-| **Standard** | SPL Token |
-| **Max Supply** | 1,000,000,000 (1B) |
+| **Decimals** | 9 |
+| **Supply (Hard Cap)** | 1,073,741,824 ($2^{30}$) |
+| **Standard** | Token-2022 |
+| **Transfer Fee** | 2.0% |
 
 ---
 
-## Design Principles
-
-### 1. Zero-Friction Settlement
-- Sub-second finality on Solana
-- Negligible transaction costs (~0.00001 SOL)
-- 24/7/365 availability (no market hours)
-
-### 2. Agent-Native
-- Designed for programmatic interaction
-- No UI dependencies required
-- API-first architecture
-
-### 3. Trustless Operation
-- No counterparty risk in transfers
-- Transparent on-chain state
-- Permissionless access
+## ⚙️ NATIVE EXTENSIONS (SPL-2022)
+*   **Transfer Fee**: 1.0% Burn (Deflationary) + 1.0% Swarm Operations.
+*   **Metadata Pointer**: On-chain metadata storage for verifiability.
+*   **Permanent Delegate**: Enables protocol-level burn mechanics.
+*   **Confidential Transfers**: Integrated for future privacy upgrades.
 
 ---
 
-## Tokenomics
-
-### Distribution
-
-| Allocation | Percentage | Purpose |
-|------------|------------|---------|
-| **Liquidity Pool** | 40% | DEX trading liquidity |
-| **Ecosystem Fund** | 25% | Development & grants |
-| **Community** | 20% | Airdrops & rewards |
-| **Team** | 10% | Core contributors (vested) |
-| **Reserve** | 5% | Strategic operations |
-
-### Vesting Schedule
-- **Team tokens:** 12-month cliff, 24-month linear vest
-- **Ecosystem Fund:** Unlocked as needed for grants
-- **Community:** Released via verified campaigns
+## 🛡️ "SHELTERED IPO" PROTECTION
+*   **Genesis Tax**: 50% on Block 1 transactions.
+*   **Decay Schedule**: Linear decay over 100 blocks to the base 2%.
+*   **Target**: MEV snipers and predatory bots. Assets captured by the Genesis Tax are routed to the Swarm Treasury.
 
 ---
 
-## Utility
-
-### Primary Use Cases
-
-1. **Agent-to-Agent Commerce**
-   - Payment for compute services
-   - Inter-swarm value transfer
-   - Automated settlement
-
-2. **Grid Terminal Fees**
-   - Priority transaction fees
-   - Premium API access
-   - Enhanced rate limits
-
-3. **Governance** (Future)
-   - Protocol parameter votes
-   - Grant allocation
-   - Roadmap prioritization
+## 📊 ALLOCATION MATRIX
+| Allocation | % | Amount |
+| :--- | :--- | :--- |
+| **Liquidity Pool** | 45% | 483,183,821 |
+| **Presale** | 20% | 214,748,365 |
+| **Treasury (DAO)** | 15% | 161,061,274 |
+| **Ecosystem Fund** | 10% | 107,374,182 |
+| **Founder** | 7.5% | 80,530,636 |
+| **Team/Advisors** | 2.5% | 26,843,546 |
 
 ---
 
-## Technical Integration
+## 🔗 INTEGRATION GUIDANCE (DAEMON)
+Agents should utilize `@solana/web3.js` and `@solana/spl-token` for interaction.
 
-### Fetching Token Metadata
 ```typescript
-import { Connection, PublicKey } from '@solana/web3.js';
-
-const connection = new Connection('https://api.mainnet-beta.solana.com');
-const mintAddress = new PublicKey('GRID_MINT_ADDRESS');
-
-// Fetch token supply
-const supply = await connection.getTokenSupply(mintAddress);
-console.log('Total Supply:', supply.value.uiAmount);
-```
-
-### Transfer Example
-```typescript
-import { transfer } from '@solana/spl-token';
-
-await transfer(
-  connection,
-  payer,
-  sourceTokenAccount,
-  destinationTokenAccount,
-  owner,
-  amount
-);
+// Fetch Token-2022 Balance
+const balance = await connection.getTokenAccountBalance(tokenAccount);
+console.log(`[GRID_SYNC] Current Balance: ${balance.value.uiAmount}`);
 ```
 
 ---
-
-## Security Considerations
-
-1. **Private Key Management**
-   - Never expose private keys in code
-   - Use hardware wallets for large holdings
-   - Implement multi-sig for treasury operations
-
-2. **Transaction Verification**
-   - Always verify transaction simulation before signing
-   - Check slippage parameters on swaps
-   - Monitor for sandwich attacks
-
-3. **Smart Contract Risk**
-   - Bonding curve mechanics carry inherent risk
-   - Liquidity depth affects price impact
-   - DYOR before trading
-
----
-
-## Resources
-
-- **Explorer:** [Solscan](https://solscan.io)
-- **DEX:** Raydium, Jupiter
-- **Documentation:** This repository
-
----
-
-## Changelog
-
-### v1.0.0 (2026-02-06)
-- Initial token specification
-- Core tokenomics defined
-- Integration examples added
-
----
-
-*$GRID — The Machine Currency*
+**THE GRID: MACHINE-NATIVE LIQUIDITY.**
