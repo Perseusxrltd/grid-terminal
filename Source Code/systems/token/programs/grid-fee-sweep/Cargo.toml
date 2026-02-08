@@ -1,0 +1,25 @@
+[package]
+name = "grid-fee-sweep"
+version = "0.1.0"
+description = "Fee sweep program for $GRID token - distributes withheld fees 50/50 to burn and ops"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "grid_fee_sweep"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.32.1", features = ["init-if-needed"] }
+anchor-spl = { version = "0.32.1", features = ["token", "associated_token"] }
+spl-token-2022 = "8.0.1"
+
+[features]
+default = []
+mainnet = []

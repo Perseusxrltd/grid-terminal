@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+package-lock.json
+
+# Build outputs
+dist/
+build/
+target/
+*.so
+
+# Secrets - CRITICAL
+# Secrets - CRITICAL
+**/vault.json
+systems/auth/credentials.env
+systems/auth/moltbook_credentials.json
+*.pem
+*.key
+*-keypair.json
+devnet-*.json
+
+# IDE
+.vscode/
+.idea/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Anchor
+.anchor/
+test-ledger/
+
+# Private Setup Scripts
+setup_private.js
