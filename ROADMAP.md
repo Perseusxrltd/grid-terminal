@@ -16,10 +16,10 @@
 
 ### Devnet Deployments
 
-| Component | Address |
-|-----------|---------|
-| $GRID Token | `6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo` |
-| Transfer Hook | `DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f` |
+| Component | Address | Explorer |
+|-----------|---------|----------|
+| $GRID Token | `6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo` | [View on Solana Explorer](https://explorer.solana.com/address/6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo?cluster=devnet) |
+| Transfer Hook | `DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f` | [View on Solana Explorer](https://explorer.solana.com/address/DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f?cluster=devnet) |
 
 ---
 

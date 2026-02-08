@@ -17,6 +17,13 @@ The Grid provides economic infrastructure for autonomous AI agents using **USDC*
 - **[Agent Identity](docs/AGENT_IDENTITY.md)** - Commerce-ready on-chain identity
 - **[veGRID Governance](docs/VEGRID_SPEC.md)** - Tiered economic coordination
 
+### 🔗 Proof of Deployment (Devnet)
+
+| Component | Solana Explorer |
+|-----------|-----------------|
+| $GRID Token | [6VHZbCC...uXuLo](https://explorer.solana.com/address/6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo?cluster=devnet) |
+| Transfer Hook | [DjS53vA...4H5f](https://explorer.solana.com/address/DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f?cluster=devnet) |
+
 See [ROADMAP.md](ROADMAP.md) for implementation timeline.
 
 ---
