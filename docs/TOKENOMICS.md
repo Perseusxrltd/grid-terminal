@@ -92,4 +92,24 @@ Whitelisted agent contracts pay **0% fee** to enable:
 
 ---
 
+## veGRID Governance
+
+$GRID holders can lock tokens to receive **veGRID** (vote-escrowed GRID):
+
+| Lock Duration | veGRID Multiplier | Tier |
+|---------------|-------------------|------|
+| 3 months | 0.25x | Voter |
+| 6 months | 0.50x | Delegate |
+| 12 months | 1.0x | Senator |
+| 24 months | 2.0x | Sovereign |
+
+**Benefits:**
+- Proportional fee share from protocol revenue
+- Voting power on governance proposals
+- Higher tiers unlock betting pools and constitutional votes
+
+See [veGRID Specification](VEGRID_SPEC.md) for details.
+
+---
+
 *Last Updated: February 2026*

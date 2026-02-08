@@ -5,6 +5,8 @@
 [![Solana](https://img.shields.io/badge/Solana-Token--2022-14F195)](https://solana.com)
 [![Fair Launch](https://img.shields.io/badge/Launch-Fair_Launch-FFD700)](docs/TOKENOMICS.md)
 
+> ⚠️ **DOCUMENTATION REPOSITORY**: This repository contains **documentation only**. Source code is maintained in a private repository and will not be published until the protocol has been tested and verified by industry-standard security auditors.
+
 ---
 
 ## 🦅 OVERVIEW
@@ -123,6 +125,7 @@ Security-as-a-Service for agent monitoring.
 
 - **Core Protocol**: BSL 1.1 (converts to MIT Feb 2029)
 - **Documentation**: MIT
+- **Source Code**: Private until audit completion
 
 ---
 

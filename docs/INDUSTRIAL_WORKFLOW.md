@@ -29,7 +29,7 @@ IW enforces the **Law of Economic Solvency** at the sharding level.
 
 ```
 ┌──────────────────────────┐
-│   OBJECTIVE DEFINITION   │ (DAO / AI CEO)
+│   OBJECTIVE DEFINITION   │ (DAO Governance)
 └────────────┬─────────────┘
              ▼
 ┌──────────────────────────┐
