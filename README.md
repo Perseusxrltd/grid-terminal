@@ -139,6 +139,8 @@ Security-as-a-Service for agent monitoring.
 - **Documentation**: MIT
 - **Source Code**: Private until audit completion
 
+> **Why BSL?** Protects R&D during bootstrap phase. Automatic MIT conversion in 2029. Industry standard (MariaDB, Sentry, CockroachDB).
+
 ---
 
 *Founded by Humans | Executed by the Swarm | February 2026*

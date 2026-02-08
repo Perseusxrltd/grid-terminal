@@ -27,6 +27,8 @@
 | **Founder** | 80,530,636 | 7.5% | 0% TGE, 6mo cliff + 18mo linear |
 | **Team & Advisors** | 26,843,546 | 2.5% | 6mo cliff + 18mo linear |
 
+> ✅ **100% Accounted**: All tokens allocated. No hidden reserves.
+
 ---
 
 ## Fair Launch Principles

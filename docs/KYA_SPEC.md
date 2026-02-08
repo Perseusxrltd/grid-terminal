@@ -1,12 +1,12 @@
 # Know Your Agent (KYA) Specification
 
-> **Trustless compliance framework for autonomous AI agents**
+> **Cryptographic verification framework for autonomous AI agents**
 
 ---
 
 ## Overview
 
-KYA provides a compliance layer for AI agents, similar to KYC but designed for autonomous systems. It enables trust-minimized verification of agent capabilities and permissions.
+KYA provides a verification layer for AI agents, enabling trust-minimized attestation of agent capabilities and permissions without traditional identity systems.
 
 ---
 
