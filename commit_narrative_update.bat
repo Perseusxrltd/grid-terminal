@@ -1,10 +1,10 @@
 @echo off
 echo ==========================================
-echo USDC Hackathon Submission
+echo Grid Terminal - Push Latest Changes
 echo ==========================================
 
 git add .
-git commit -m "feat: USDC Hackathon submission - Agentic Commerce track"
+git commit -m "docs: Final updates - investor concerns addressed, consistency verified"
 git push
 
 echo ==========================================
