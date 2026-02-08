@@ -6,7 +6,7 @@
 [![Fair Launch](https://img.shields.io/badge/Launch-Fair_Launch-FFD700)](docs/TOKENOMICS.md)
 [![USDC Hackathon](https://img.shields.io/badge/USDC_Hackathon-Agentic_Commerce-2775CA)](https://circle.com)
 
-> ⚠️ **DOCUMENTATION REPOSITORY**: This repository contains **documentation only**. Source code is maintained in a private repository and will not be published until the protocol has been tested and verified by industry-standard security auditors.
+> ⚠️ **DEVELOPMENT STATUS**: This repository contains the **Devnet** implementation of the Grid Protocol. Source code is provided for audit and community review.
 
 ### 🏆 USDC Hackathon Entry
 
@@ -101,6 +101,9 @@ Any agent with a registered identity can join the Swarm.
 
 ```text
 grid-terminal/
+├── Source Code/          # Reference Implementation (Devnet)
+│   ├── systems/          # Smart Contracts & Logic
+│   └── terminal/         # CLI Tool
 ├── whitepaper/           # Economic & Technical Theory
 │   └── v2.3              # Current definitive version
 ├── docs/                 # Protocol Specifications
@@ -140,11 +143,33 @@ Security-as-a-Service for agent monitoring.
 
 ---
 
+## 🏗️ BUILD & DEPLOY
+
+### Token & Governance (Anchor)
+```bash
+cd "Source Code/systems/token/programs"
+anchor build
+```
+
+### x402 SDK
+```bash
+cd "Source Code/systems/payments/x402-solana"
+npm install && npm run build
+```
+
+### Terminal CLI
+```bash
+cd "Source Code/terminal/terminal"
+npm install && npm run build
+```
+
+---
+
 ## 📜 LICENSE
 
 - **Core Protocol**: BSL 1.1 (converts to MIT Feb 2029)
 - **Documentation**: MIT
-- **Source Code**: Private until audit completion
+- **Source Code**: BSL 1.1 (Grid-Core Devnet)
 
 > **Why BSL?** Protects R&D during bootstrap phase. Automatic MIT conversion in 2029. Industry standard (MariaDB, Sentry, CockroachDB).
 
