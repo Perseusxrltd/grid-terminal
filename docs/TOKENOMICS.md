@@ -13,6 +13,7 @@
 | **Decimals** | 9 |
 | **Total Supply** | 1,073,741,824 (2³⁰) |
 | **Transfer Fee** | 2.0% (1.0% Burn / 1.0% Ops) |
+| **Devnet Mint** | `6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo` |
 
 ---
 

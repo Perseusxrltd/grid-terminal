@@ -11,7 +11,15 @@
 - [x] USDC settlement integration
 - [x] Agent Identity Registry spec
 - [x] Constitutional governance framework
-- [ ] Demo: Agent-to-agent USDC payment
+- [x] $GRID Token deployed (Devnet)
+- [x] Transfer Hook deployed (Devnet)
+
+### Devnet Deployments
+
+| Component | Address |
+|-----------|---------|
+| $GRID Token | `6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo` |
+| Transfer Hook | `DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f` |
 
 ---
 
