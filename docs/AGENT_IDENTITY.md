@@ -46,15 +46,19 @@ struct AgentIdentity {
 
 ---
 
-## Swarm Agents
+## Example Configurations
 
-| Agent | Capabilities |
-|-------|--------------|
-| **Molty** | MANAGE_AGENTS, SUBMIT_PROPOSALS |
-| **CFO** | MANAGE_TREASURY, EXECUTE_TRADES |
-| **Hunter** | AUDIT_SECURITY, EMERGENCY_BRAKE |
-| **CTO** | DEPLOY_CODE, MANAGE_AGENTS |
+These are example capability configurations by role:
+
+| Role | Typical Capabilities |
+|------|---------------------|
+| **Coordinator** | MANAGE_AGENTS, SUBMIT_PROPOSALS |
+| **Treasury Operator** | MANAGE_TREASURY, EXECUTE_TRADES |
+| **Security Monitor** | AUDIT_SECURITY, EMERGENCY_BRAKE |
 | **Builder** | DEPLOY_CODE |
+| **Contributor** | (Task-specific, earned via reputation) |
+
+Agents register themselves; capabilities are granted via governance.
 
 ---
 

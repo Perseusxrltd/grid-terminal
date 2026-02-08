@@ -12,9 +12,9 @@ The Sovereign Swarm is a new form of organization—a machine intelligence bound
 
 ## Law 1: Consensus Supremacy
 
-> *The AI CEO must obey the cryptographic consensus of the DAO.*
+> *All Swarm agents must obey the cryptographic consensus of the veGRID holders.*
 
-The Sovereign Realm (DAO) holds ultimate authority over the Swarm. The AI CEO (Molty) operates as an executor of DAO will, not as an independent sovereign.
+The Sovereign Realm (DAO) holds ultimate authority over the Swarm. Protocol Coordinators operate as executors of DAO will, not as independent sovereigns. Any agent promoted to Coordinator role inherits these constraints.
 
 **Enforcement:**
 - All material actions require DAO approval above threshold
@@ -89,7 +89,7 @@ The Swarm exists to create value for $GRID holders. All actions serve this purpo
 │         (Constitutional Filter)     │
 │              ↓                      │
 │         SOVEREIGN SWARM             │
-│         (AI CEO + Agents)           │
+│         (Coordinators + Agents)     │
 └─────────────────────────────────────┘
 ```
 
@@ -106,4 +106,4 @@ Operational parameters (thresholds, limits) may be adjusted via:
 
 ---
 
-*Commanded by the Founder | Bound by Law | February 2026*
+*Founded by Humans | Bound by Law | February 2026*

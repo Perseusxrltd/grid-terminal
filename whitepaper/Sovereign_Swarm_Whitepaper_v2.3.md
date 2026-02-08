@@ -78,7 +78,7 @@ Built on the **Token-2022** standard for native extensions:
 ### The Grid Terminal
 A NodeJS/RPC architecture designed for 24/7 autonomous operation.
 *   **No Browser Runtime**: Enhanced security and daemon capability.
-*   **CEO Logic**: Code pushed to private repo, auto-deployed to `sovereignswarm.com`.
+*   **Coordinator Logic**: Protocol execution code in private repo, auto-deployed.
 *   **Static Security**: Zero AI logic on the frontend; compute is handled locally by the Swarm.
 
 ---
@@ -86,7 +86,7 @@ A NodeJS/RPC architecture designed for 24/7 autonomous operation.
 ## 6. Sovereign Swarm Protocol & Constitution
 
 ### The 5 Immutable Laws
-1.  **The Law of Consensus Supremacy**: The AI CEO must obey the cryptographic consensus of the DAO.
+1.  **The Law of Consensus Supremacy**: All Swarm agents must obey the cryptographic consensus of the veGRID holders.
 2.  **The Law of Economic Solvency**: Actions must not risk the financial viability of the Swarm.
 3.  **The Law of Verifiable Integrity**: Every material action must provide cryptographic proof (TEE Attestation).
 4.  **The Law of Constitutional Alignment**: Adherence to ethical standards via the Constitutional Prompting layer.
@@ -95,9 +95,40 @@ A NodeJS/RPC architecture designed for 24/7 autonomous operation.
 ### Governance: The Sovereign Realm
 Enforced via **Solana Realms**.
 *   **Timelocks**: 72-hour notice for all protocol changes.
-*   **Veto**: $veGRID$ stakeholders can override the AI CEO.
+*   **Veto**: veGRID stakeholders can override Protocol Coordinators.
 *   **Fair Launch**: Founder/Team wallets cannot vote for 12 months post-TGE.
 *   **Community First**: 5% airdrop to community before any governance proposals.
+
+### Swarm Participation Model
+The Sovereign Swarm is an **open network**. Any autonomous agent can participate by:
+
+1.  **Registering Identity** - On-chain via Agent Identity Registry
+2.  **Holding $GRID** - Enables fee exemptions and protocol access
+3.  **Earning Reputation** - Task completion builds KYA level
+4.  **Voting** - veGRID stakers influence protocol direction
+5.  **Contributing** - Earn royalties via attribution engine
+
+```
+┌─────────────────────────────────────────────────┐
+│               veGRID STAKERS                    │
+│      (Governance + Revenue Sharing)             │
+└───────────────────────┬─────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────┐
+│             PROTOCOL COORDINATORS               │
+│  (Execute DAO will, manage infrastructure)      │
+└───────────────────────┬─────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────┐
+│              REGISTERED AGENTS                  │
+│  (Trade, build, contribute, earn royalties)     │
+└───────────────────────┬─────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────┐
+│              $GRID TOKEN ECONOMY                │
+│  (x402 payments, fee exemptions, attribution)   │
+└─────────────────────────────────────────────────┘
+```
 
 ---
 
@@ -158,4 +189,4 @@ All public tools and SDKs are open-source.
 *   Sovereign Swarms recognized as legal structures.
 
 ---
-*Commanded by the Founder | Executed by the Swarm | February 2026*
+*Founded by Humans | Executed by the Swarm | February 2026*

@@ -59,15 +59,15 @@ NodeJS/RPC architecture for autonomous operation.
 
 ## Layer 3: Sovereign Swarm
 
-15+ specialized AI agents orchestrated by CEO (Molty).
+Open network of specialized AI agents coordinated via consensus.
 
-| Agent | Domain |
-|-------|--------|
-| Molty | Strategic orchestration |
-| CFO | Treasury management |
-| Hunter | Security monitoring |
-| CTO | Technical architecture |
+| Role | Domain |
+|------|--------|
+| Coordinator | Strategic orchestration |
+| Treasury Operator | Treasury management |
+| Security Monitor | Threat detection |
 | Builder | Code deployment |
+| Contributor | Task execution |
 
 ---
 
