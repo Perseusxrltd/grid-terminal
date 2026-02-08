@@ -8,11 +8,7 @@ build/
 target/
 *.so
 
-# Secrets - CRITICAL
-# Secrets - CRITICAL
-**/vault.json
-systems/auth/credentials.env
-systems/auth/moltbook_credentials.json
+
 *.pem
 *.key
 *-keypair.json
