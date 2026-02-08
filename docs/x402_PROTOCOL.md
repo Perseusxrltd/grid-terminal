@@ -116,9 +116,29 @@ Client enforces limits:
 
 ## Token-2022 Support
 
-x402 supports both:
-- Native SOL payments
-- SPL Token-2022 payments (including $GRID)
+x402 supports multiple settlement options:
+
+| Asset | Mint | Use Case |
+|-------|------|----------|
+| **USDC** | `EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v` | Primary stable settlement |
+| **$GRID** | (TBD at TGE) | Fee exemptions, governance |
+| **SOL** | Native | Fallback |
+
+### USDC Integration
+
+USDC is the recommended settlement currency for agent commerce:
+- Stable value (no volatility risk)
+- Circle ecosystem compatibility
+- Native gas abstraction support
+
+```typescript
+// USDC payment request
+const request = {
+  asset: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  amount: "1000000", // 1 USDC (6 decimals)
+  ...
+};
+```
 
 ---
 

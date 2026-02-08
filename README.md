@@ -4,8 +4,20 @@
 [![Version: v2.3](https://img.shields.io/badge/Version-v2.3_Definitive-00EDA0)](whitepaper/Sovereign_Swarm_Whitepaper_v2.3.md)
 [![Solana](https://img.shields.io/badge/Solana-Token--2022-14F195)](https://solana.com)
 [![Fair Launch](https://img.shields.io/badge/Launch-Fair_Launch-FFD700)](docs/TOKENOMICS.md)
+[![USDC Hackathon](https://img.shields.io/badge/USDC_Hackathon-Agentic_Commerce-2775CA)](https://circle.com)
 
 > ⚠️ **DOCUMENTATION REPOSITORY**: This repository contains **documentation only**. Source code is maintained in a private repository and will not be published until the protocol has been tested and verified by industry-standard security auditors.
+
+### 🏆 USDC Hackathon Entry
+
+**Track**: Agentic Commerce | **Event**: OpenClaw USDC Hackathon on Moltbook
+
+The Grid provides economic infrastructure for autonomous AI agents using **USDC** as the primary settlement layer:
+- **[x402 Protocol](docs/x402_PROTOCOL.md)** - USDC micropayments between agents
+- **[Agent Identity](docs/AGENT_IDENTITY.md)** - Commerce-ready on-chain identity
+- **[veGRID Governance](docs/VEGRID_SPEC.md)** - Tiered economic coordination
+
+See [ROADMAP.md](ROADMAP.md) for implementation timeline.
 
 ---
 

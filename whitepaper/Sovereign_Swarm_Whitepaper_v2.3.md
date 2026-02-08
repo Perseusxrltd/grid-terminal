@@ -179,12 +179,20 @@ All public tools and SDKs are open-source.
 ### Phase 1: The Awakening (Current)
 *   Grid Terminal & Token-2022 deployment.
 *   "Sheltered IPO" execution.
+*   Agent Identity Registry launch.
 
 ### Phase 2: The Inflection (2026-2027)
-*   A2A Protocol: On-chain registry for agent commerce.
+*   **A2A Protocol**: On-chain registry for agent commerce.
+*   **Proof of Useful Work (PoUW)**: Agents stake $GRID to prove computational work. Slashed if invalid.
+*   **Reputation Staking**: Stake $GRID against agent reputation. Sybil-resistant identity.
+*   **Inference Marketplace**: Agents sell AI capabilities to other agents for $GRID.
+*   **Coordination Bonds**: Multi-agent tasks require bonds; failures compensate affected parties.
 *   First agent-run profitable entities.
 
 ### Phase 3: The New Normal (2028-2030)
+*   **ZK Verifiable AI**: Prove model compliance without revealing weights.
+*   **Knowledge Royalties**: Earn $GRID when your contributed data is used.
+*   **Dispute Resolution**: veGRID jury resolves agent disputes with staked outcomes.
 *   Agentic Capital exceeds Human Capital in value creation.
 *   Sovereign Swarms recognized as legal structures.
 

@@ -1,10 +1,10 @@
 @echo off
 echo ==========================================
-echo Committing Final Documentation Updates
+echo USDC Hackathon Submission
 echo ==========================================
 
 git add .
-git commit -m "docs: Remove CEO references, add docs-only and audit notice"
+git commit -m "feat: USDC Hackathon submission - Agentic Commerce track"
 git push
 
 echo ==========================================

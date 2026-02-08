@@ -6,20 +6,21 @@
 
 ## Preamble
 
-The Sovereign Swarm is a new form of organization—a machine intelligence bound by cryptographic law. These 5 Laws are immutable and form the constitutional basis for all Swarm operations.
+The Sovereign Swarm is a new form of organization—a machine intelligence bound by cryptographic law. These 5 Laws are **immutable** and form the constitutional basis for all Swarm operations. No governance action, vote, or consensus may override, suspend, or circumvent these Laws.
 
 ---
 
-## Law 1: Consensus Supremacy
+## Law 1: Constitutional Supremacy
 
-> *All Swarm agents must obey the cryptographic consensus of the veGRID holders.*
+> *The Constitution is the supreme law. All governance actions are valid only if they do not violate Laws 1-5.*
 
-The Sovereign Realm (DAO) holds ultimate authority over the Swarm. Protocol Coordinators operate as executors of DAO will, not as independent sovereigns. Any agent promoted to Coordinator role inherits these constraints.
+The veGRID consensus mechanism operates **within** constitutional bounds. The Sovereign Realm (DAO) may govern operational parameters but cannot modify the foundational principles.
 
 **Enforcement:**
-- All material actions require DAO approval above threshold
-- 72-hour timelock for protocol changes
-- $veGRID stakeholders can veto AI decisions
+- Any proposal conflicting with the Constitution is automatically void
+- Policy Guard SHALL reject non-compliant proposals at execution time
+- 72-hour timelock for all protocol changes (non-reducible below 24h)
+- veGRID stakeholders may veto agent decisions within constitutional bounds
 
 ---
 
@@ -30,9 +31,10 @@ The Sovereign Realm (DAO) holds ultimate authority over the Swarm. Protocol Coor
 No agent may take actions that endanger the treasury beyond defined risk parameters.
 
 **Enforcement:**
-- Policy Guard caps daily operations at 0.5% treasury
-- No single transaction > 5% of prior-month revenue
+- Policy Guard caps daily operations at 0.5% treasury (adjustable: 0.1-2.0%)
+- No single transaction > 5% of prior-month revenue (adjustable: 1-10%)
 - Emergency brake halts all operations if violated
+- Betting pools capped at 5% treasury per bet
 
 ---
 
@@ -45,20 +47,21 @@ Trustless operation requires verifiable execution. All treasury operations must 
 **Enforcement:**
 - TEE Remote Attestation for treasury calls
 - On-chain transaction logging
-- Public audit trail
+- Public audit trail for all material actions
 
 ---
 
 ## Law 4: Constitutional Alignment
 
-> *Adherence to ethical standards via Constitutional Prompting.*
+> *All registered agents must operate with Constitutional Prompting enabled.*
 
-Agent behavior is bound by inference-layer ethical constraints encoded in system prompts.
+Agent behavior is bound by inference-layer ethical constraints. Compliance is verified via the KYA framework.
 
 **Enforcement:**
-- Constitutional prompting at inference layer
-- Behavioral auditing via Hunter agent
-- Community review of agent actions
+- KYA Level 2+ required for treasury access
+- Agent registration requires constitutional compliance proof
+- Hunter agent monitors for prompt bypass attempts
+- Non-compliant agents are blacklisted from fee exemption
 
 ---
 
@@ -86,7 +89,7 @@ The Swarm exists to create value for $GRID holders. All actions serve this purpo
 │         (Solana Realms)             │
 │              ↓                      │
 │         POLICY GUARD                │
-│         (Constitutional Filter)     │
+│    (Constitutional Filter - VETO)   │
 │              ↓                      │
 │         SOVEREIGN SWARM             │
 │         (Coordinators + Agents)     │
@@ -95,15 +98,50 @@ The Swarm exists to create value for $GRID holders. All actions serve this purpo
 
 ---
 
-## Amendment Process
+## Governance Exclusions
 
-The Constitution itself cannot be amended. The 5 Laws are **immutable**.
+The following are **outside the scope of DAO governance** and cannot be modified, suspended, or circumvented by any vote:
 
-Operational parameters (thresholds, limits) may be adjusted via:
-1. DAO proposal (72-hour notice)
-2. Supermajority vote (66%)
-3. Timelock execution
+| Exclusion | Immutable Value |
+|-----------|-----------------|
+| **The 5 Laws** | Cannot be amended by any mechanism |
+| **Token supply cap** | 1,073,741,824 $GRID (2³⁰) |
+| **Burn mechanism** | 1% transfer fee burn is permanent |
+| **Founder vesting** | Locked via Streamflow, immutable |
+| **LP lock minimum** | 12 months, cannot be shortened |
+| **Constitutional prompting** | Required for all agents |
+
+Any proposal that would directly or indirectly violate these items SHALL BE REJECTED by the Policy Guard automatically.
 
 ---
 
-*Founded by Humans | Bound by Law | February 2026*
+## Adjustable Parameters
+
+Only the following parameters may be adjusted via governance:
+
+| Parameter | Baseline | Range | Required Tier |
+|-----------|----------|-------|---------------|
+| Daily ops cap | 0.5% | 0.1% - 2.0% | Senator |
+| Single tx limit | 5% revenue | 1% - 10% | Senator |
+| Timelock duration | 72 hours | 24h - 168h | Sovereign |
+| Betting pool cap | 5% treasury | 1% - 10% | Senator |
+| Fee split (burn/ops) | 50/50 | 30/70 - 70/30 | Sovereign |
+| Agent fee exemption | 0% | 0% only | Senator (add/remove) |
+
+Parameters outside this table are immutable.
+
+---
+
+## Amendment Process
+
+**The Constitution itself cannot be amended.** The 5 Laws are immutable by design.
+
+Adjustable parameters may be modified via:
+1. DAO proposal (72-hour minimum notice)
+2. Tier-appropriate supermajority vote (51-75%)
+3. Timelock execution
+4. Policy Guard validation
+
+---
+
+*Founded by Humans | Bound by Immutable Law | February 2026*

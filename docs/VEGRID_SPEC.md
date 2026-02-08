@@ -18,7 +18,7 @@ veGRID (vote-escrowed GRID) is a non-transferable governance token obtained by l
 | 3 months | 0.25x | Voter | Betting pools |
 | 6 months | 0.50x | Delegate | Grants, agent whitelisting |
 | 12 months | 1.0x | Senator | Protocol params, treasury |
-| 24 months | 2.0x | Sovereign | Tokenomics, constitution |
+| 24 months | 2.0x | Sovereign | Tokenomics, protocol upgrades |
 
 ---
 
@@ -63,8 +63,8 @@ veGRID = GRID_locked × lock_multiplier × (time_remaining / max_lock_time)
 
 ### Tier 4: Sovereign
 - All Tier 3 powers
-- Vote on tokenomics changes
-- Vote on constitutional amendments
+- Vote on tokenomics changes (within constitutional bounds)
+- Vote on protocol upgrades (non-constitutional)
 - Veto power (requires 10% of total veGRID)
 - 2.0x fee share multiplier
 
@@ -105,7 +105,8 @@ veGRID holders (Tier 1+) can vote to allocate treasury funds to prediction marke
 | Fee change (>0.5%) | Sovereign | 66% | 14d |
 | Burn rate change | Sovereign | 66% | 14d |
 | Tokenomics change | Sovereign | 75% | 30d |
-| Constitutional | Sovereign | 90% | 30d |
+
+> ⚠️ **Constitutional Exclusion**: The 5 Immutable Laws cannot be modified by governance. See [CONSTITUTION.md](CONSTITUTION.md) for exclusions.
 
 ### Exit Rights
 - **Ragequit**: Any holder can exit with pro-rata treasury share
