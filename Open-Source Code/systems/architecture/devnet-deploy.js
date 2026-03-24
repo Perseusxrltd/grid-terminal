@@ -10,8 +10,8 @@
  * - Standard Devnet Broadcast (No Jito)
  * 
  * Usage:
- *   node devnet-deploy.js           # Dry run
- *   node devnet-deploy.js --execute # LIVE Devnet Broadcast
+ *   node devnet-deploy.js --hook-program-id <PROGRAM_ID>           # Dry run
+ *   node devnet-deploy.js --execute --hook-program-id <PROGRAM_ID> # LIVE Devnet Broadcast
  */
 
 const {
@@ -66,10 +66,6 @@ const CONFIG = {
     // Networking
     rpcUrl: 'https://api.devnet.solana.com',
 
-    // AI Firewall Hook Program ID (Must be deployed first!)
-    // Defaulting to the ID declared in lib.rs
-    hookProgramId: new PublicKey('DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f'),
-
     vaultPath: path.resolve(__dirname, '../../../Grid-Private/auth/vault.json'),
 };
 
@@ -106,12 +102,32 @@ function loadDeployer() {
     }
 }
 
+function resolveHookProgramId() {
+    const flagIndex = process.argv.indexOf('--hook-program-id');
+    const rawProgramId =
+        (flagIndex >= 0 && process.argv[flagIndex + 1]) ||
+        process.env.HOOK_PROGRAM_ID ||
+        null;
+
+    if (!rawProgramId) {
+        return null;
+    }
+
+    try {
+        return new PublicKey(rawProgramId);
+    } catch (e) {
+        console.error(`❌ Invalid hook program ID: ${e.message}`);
+        process.exit(1);
+    }
+}
+
 // ============================================================================
 // MAIN DEPLOYMENT
 // ============================================================================
 
 async function run() {
     const isExecute = process.argv.includes('--execute');
+    const hookProgramId = resolveHookProgramId();
     const deployer = loadDeployer();
     const connection = new Connection(CONFIG.rpcUrl, 'confirmed');
 
@@ -120,9 +136,20 @@ async function run() {
     console.log(`Deployer: ${deployer.publicKey.toBase58()}`);
     console.log(`Network:  Devnet`);
     console.log(`Mode:     ${isExecute ? 'LIVE' : 'DRY RUN'}`);
-    console.log(`Hook ID:  ${CONFIG.hookProgramId.toBase58()}`);
+    console.log(`Hook ID:  ${hookProgramId ? hookProgramId.toBase58() : 'UNSET'}`);
     console.log(`Tax:      2% Native`);
     console.log(`━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n`);
+
+    if (!hookProgramId) {
+        const guidance = 'Pass --hook-program-id <PROGRAM_ID> or set HOOK_PROGRAM_ID.';
+        if (isExecute) {
+            console.error(`❌ Hook program ID is required for live runs. ${guidance}`);
+            process.exit(1);
+        }
+
+        console.warn(`⚠️ No hook program ID configured. ${guidance}`);
+        console.warn('⚠️ Dry run will continue without transfer-hook initialization.');
+    }
 
     if (isExecute) {
         // Airdrop SOL if needed
@@ -158,7 +185,7 @@ async function run() {
     const extensions = [
         ExtensionType.TransferFeeConfig,
         ExtensionType.MetadataPointer,
-        ExtensionType.TransferHook,
+        ...(hookProgramId ? [ExtensionType.TransferHook] : []),
         // ExtensionType.TokenMetadata // We will add its length manually
     ];
     const mintLen = getMintLen(extensions);
@@ -197,13 +224,15 @@ async function run() {
             mint,
             TOKEN_2022_PROGRAM_ID
         ),
-        // Initialize Transfer Hook
-        createInitializeTransferHookInstruction(
-            mint,
-            deployer.publicKey,
-            CONFIG.hookProgramId, // The Firewall Program
-            TOKEN_2022_PROGRAM_ID
-        ),
+        ...(hookProgramId ? [
+            // Only include the extension when the hook deployment is explicitly provided.
+            createInitializeTransferHookInstruction(
+                mint,
+                deployer.publicKey,
+                hookProgramId,
+                TOKEN_2022_PROGRAM_ID
+            )
+        ] : []),
         // Initialize Metadata (This instruction initializes the extension AND the data)
         // For TokenMetadata, this must happen BEFORE InitializeMint in some versions,
         // or it handles the extension creation itself.

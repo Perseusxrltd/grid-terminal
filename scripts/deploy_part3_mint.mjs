@@ -86,6 +86,20 @@ function getPayer() {
     throw new Error("Could not find Default Payer at ~/.config/solana/id.json or DEPLOYER_KEY in .env");
 }
 
+function resolveHookProgramId() {
+    const flagIndex = process.argv.indexOf('--hook-program-id');
+    const rawProgramId =
+        (flagIndex >= 0 && process.argv[flagIndex + 1]) ||
+        process.env.HOOK_PROGRAM_ID ||
+        null;
+
+    if (!rawProgramId) {
+        throw new Error("Hook program ID is required. Pass --hook-program-id <PROGRAM_ID> or set HOOK_PROGRAM_ID.");
+    }
+
+    return new PublicKey(rawProgramId);
+}
+
 async function getDiscriminator(name) {
     // Basic SHA256 implementation if crypto isn't available, but we use 'crypto' module
     // Actually we can implement signature hashing or hardcode standard Anchor discriminators
@@ -114,10 +128,8 @@ async function main() {
             hookProgramId = hookKp.publicKey;
             console.log(`Hook ID (File): ${hookProgramId.toBase58()}`);
         } else {
-            // Fallback to known deployed ID
-            const FALLBACK_ID = "7Py52EPwuCxYJ7UiBKrk5ce14T4NTxuutHFtyoWDdqFV";
-            hookProgramId = new PublicKey(FALLBACK_ID);
-            console.log(`Hook ID (Fallback): ${hookProgramId.toBase58()}`);
+            hookProgramId = resolveHookProgramId();
+            console.log(`Hook ID (Configured): ${hookProgramId.toBase58()}`);
         }
     } catch (e) {
         console.error("❌ Failed to resolve Hook ID:", e.message);
