@@ -21,13 +21,19 @@ Grid-Core/
 └── README.md
 ```
 
-## Deployed Contracts (Devnet)
+## Devnet Verification Snapshot
 
-| Program | Address |
+Verified against the 2026-03-25 full-state review. This public mirror should not be treated as the canonical deployment registry.
+
+| Component | Verified Status |
 |---------|---------|
-| $GRID Token | `6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo` |
-| Transfer Hook | `DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f` |
-| Agent Identity | *Not deployed* |
+| $GRID mint (`6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo`) | Exists on devnet, Token-2022, 9 decimals, non-zero supply |
+| Agent Identity (`DDira32YctG7h2NW2L3Tt96bNuEVAsNyUxncKrTuz7QH`) | Executable on devnet |
+| Policy Guard (`2u4LtXMzdttMEV54jFEWnQrvCbx3TguyvWyfdho7MFRW`) | Executable on devnet |
+| veGRID (`4NWkSvbsms4tea4Zn2fQcJ72Hqam15m3MyGtPpPncxeC`) | Executable on devnet |
+| Transfer Hook (`DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f`) | Not verified active in the 2026-03-25 review |
+
+Current caution: the reviewed state contains multiple documented devnet mint addresses, so public docs must avoid implying that deployment reconciliation is complete.
 
 ## Security
 
