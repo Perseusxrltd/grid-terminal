@@ -6,7 +6,7 @@ skip-lint = false
 
 [programs.devnet]
 policy_guard = "2u4LtXMzdttMEV54jFEWnQrvCbx3TguyvWyfdho7MFRW"
-vegrid_staking = "8TfDNebaSf2mDduUHvReTgcKjzu3BiJcQ2aA1ksqUn1a"
+vegrid_staking = "4NWkSvbsms4tea4Zn2fQcJ72Hqam15m3MyGtPpPncxeC"
 
 [registry]
 url = "https://api.apr.dev"

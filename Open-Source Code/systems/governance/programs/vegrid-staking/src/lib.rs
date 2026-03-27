@@ -2,7 +2,7 @@ use anchor_lang::prelude::*;
 use anchor_spl::token_interface::{TokenInterface, TokenAccount, Mint};
 use anchor_spl::associated_token::AssociatedToken;
 
-declare_id!("8TfDNebaSf2mDduUHvReTgcKjzu3BiJcQ2aA1ksqUn1a");
+declare_id!("4NWkSvbsms4tea4Zn2fQcJ72Hqam15m3MyGtPpPncxeC");
 
 /// veGRID Staking Program
 /// 
