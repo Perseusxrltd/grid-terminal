@@ -57,8 +57,10 @@
 ## 🔒 Security Features
 
 **Freeze Authority** (Phase 2 only):
-- **Authority**: `BqPoJnqNLeQZCV5d9YY3Fo2LwFw17fRZbTTkEWGJJRUU` (Sovereign Deployer)
+- **Authority**: `UNRESOLVED_USE_CANONICAL_REGISTRY`
+- **Source**: Canonical deployment registry in private `grid-core`
 - **Purpose**: Prevent trading until systems ready
+- **Policy**: Do not publish or use a fallback authority wallet until upstream truth resolves
 - **Removal**: Irreversible once revoked (Phase 3)
 
 **Transfer Fee Logic**:
@@ -70,7 +72,9 @@
 - PDA-based dead address (program-owned, no private key)
 
 **Operations Wallet**:
-- Receives 50% of collected fees via sweep
+- **Destination**: `UNRESOLVED_USE_CANONICAL_REGISTRY`
+- **Source**: Canonical deployment registry in private `grid-core`
+- Receives 50% of collected fees via sweep once upstream truth resolves
 - Used for: Development, infrastructure, bounties
 
 ---

@@ -37,15 +37,17 @@
   },
   "wallets": {
     "devnet": {
-      "deployer": "BqPoJnqNLeQZCV5d9YY3Fo2LwFw17fRZbTTkEWGJJRUU",
-      "operations": "BqPoJnqNLeQZCV5d9YY3Fo2LwFw17fRZbTTkEWGJJRUU",
+      "deployer": "UNRESOLVED_USE_CANONICAL_REGISTRY",
+      "operations": "UNRESOLVED_USE_CANONICAL_REGISTRY",
       "burn": "11111111111111111111111111111111"
     },
     "mainnet": {
-      "deployer": "BqPoJnqNLeQZCV5d9YY3Fo2LwFw17fRZbTTkEWGJJRUU",
-      "operations": "8q5ZgCsSLfkkuCYVcVZmxnJ1BzmtABjMPVkZ8ZccJe8x",
+      "deployer": "UNRESOLVED_USE_CANONICAL_REGISTRY",
+      "operations": "UNRESOLVED_USE_CANONICAL_REGISTRY",
       "burn": "11111111111111111111111111111111"
-    }
+    },
+    "status": "UNRESOLVED_USE_CANONICAL_REGISTRY",
+    "source": "grid-core canonical deployment registry"
   },
   "extensions": {
     "transferHook": true,

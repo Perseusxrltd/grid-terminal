@@ -1,7 +1,7 @@
 {
   "name": "The Grid",
   "symbol": "GRID",
-  "description": "The Industrial OS for Agentic Capital. Infrastructure token for autonomous AI coordination on Solana.",
+  "description": "The Industrial OS for Agentic Capital. Infrastructure token for autonomous AI coordination on Solana. Creator and authority wallets remain unresolved pending the canonical grid-core deployment registry.",
   "image": "https://grid.sovereignswarm.io/logo.png",
   "external_url": "https://grid.sovereignswarm.io",
   "attributes": [
@@ -28,22 +28,22 @@
     {
       "trait_type": "Extension",
       "value": "Transfer Hook"
+    },
+    {
+      "trait_type": "Authority Status",
+      "value": "UNRESOLVED_USE_CANONICAL_REGISTRY"
     }
   ],
   "properties": {
     "category": "Token",
-    "creators": [
-      {
-        "address": "BqPoJnqNLeQZCV5d9YY3Fo2LwFw17fRZbTTkEWGJJRUU",
-        "share": 100
-      }
-    ],
+    "creators": [],
     "files": [
       {
         "uri": "https://grid.sovereignswarm.io/logo.png",
         "type": "image/png"
       }
-    ]
+    ],
+    "authoritySource": "grid-core canonical deployment registry"
   },
   "collection": {
     "name": "Sovereign Swarm Ecosystem",
