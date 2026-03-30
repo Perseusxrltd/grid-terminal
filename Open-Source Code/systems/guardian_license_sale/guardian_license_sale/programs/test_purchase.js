@@ -19,7 +19,11 @@ async function main() {
 
     const [saleState] = PublicKey.findProgramAddressSync([Buffer.from("sale_state")], programId);
     const asset = Keypair.generate();
-    const treasury = new PublicKey("HYjgAnd9Vb8XKRTTnUqMLnX8SEbqeV8oApsvXWqiphF2");
+    const treasuryAddress = process.env.GRID_GUARDIAN_SALE_TREASURY;
+    if (!treasuryAddress || treasuryAddress === "UNRESOLVED") {
+        throw new Error("GRID_GUARDIAN_SALE_TREASURY is unresolved. Read the canonical deployment registry before running this script.");
+    }
+    const treasury = new PublicKey(treasuryAddress);
 
     // Using a random Keypair for collection to satisfy 'writable' constraint for this test
     const dummyCollection = Keypair.generate();

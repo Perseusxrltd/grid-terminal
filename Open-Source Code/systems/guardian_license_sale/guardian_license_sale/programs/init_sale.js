@@ -34,7 +34,11 @@ async function main() {
     console.log("Sale State PDA:", saleState.toBase58());
 
     // 5. Configuration (Matching UI Tiers in GuardianNodeSale.svelte)
-    const treasury = new PublicKey("HYjgAnd9Vb8XKRTTnUqMLnX8SEbqeV8oApsvXWqiphF2");
+    const treasuryAddress = process.env.GRID_GUARDIAN_SALE_TREASURY;
+    if (!treasuryAddress || treasuryAddress === "UNRESOLVED") {
+        throw new Error("GRID_GUARDIAN_SALE_TREASURY is unresolved. Read the canonical deployment registry before running this script.");
+    }
+    const treasury = new PublicKey(treasuryAddress);
     const paymentMint = new PublicKey("4zMMC9srt5Ri5X14GAgXhaHii3GnPAEERYPJgZJDncDU"); // Devnet USDC
     const collection = new PublicKey("FfA1sZdQcEps96tMhNKxwu1s3MaLx86wMHCGigKUAtpm"); // Self as dummy
 

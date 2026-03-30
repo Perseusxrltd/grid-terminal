@@ -41,7 +41,7 @@ x402 enables autonomous agents to pay for services via the HTTP 402 "Payment Req
 {
   "version": "1.0",
   "network": "solana-devnet",
-  "payTo": "BqPoJnqNLeQZCV5d9YY3Fo2LwFw17fRZbTTkEWGJJRUU",
+  "payTo": "UNRESOLVED_USE_CANONICAL_REGISTRY",
   "amount": "10000000",
   "asset": null,
   "paymentId": "x402_intel_1707400000",
@@ -53,7 +53,7 @@ x402 enables autonomous agents to pay for services via the HTTP 402 "Payment Req
 |-------|-------------|
 | version | Protocol version (1.0) |
 | network | solana-mainnet or solana-devnet |
-| payTo | Recipient treasury wallet address |
+| payTo | Canonical recipient treasury wallet address. Fail closed until upstream registry resolves it. |
 | amount | Amount in lamports (e.g., "10000000" = 0.01 SOL) |
 | asset | Token mint (null = Native SOL) |
 | paymentId | Unique identifier for transaction correlation |
@@ -144,6 +144,8 @@ const request = {
 
 Servers must verify the signature against the `payTo` address and `amount` on-chain.
 
+When the canonical treasury/payment destination is unresolved upstream, do not publish or hardcode a fallback `payTo` wallet in requests, docs, or clients. Surface the unresolved state and wait for the canonical registry to resolve it.
+
 ### Server-Side Validation (NodeJS)
 ```typescript
 import { Connection, PublicKey } from '@solana/web3.js';
@@ -166,4 +168,4 @@ async function verifyX402Payment(signature: string, expectedLamports: number) {
 
 ---
 
-*Last Updated: February 11, 2026*
+*Last Updated: March 30, 2026*
