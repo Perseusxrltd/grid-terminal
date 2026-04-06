@@ -27,7 +27,7 @@
     },
     {
       "trait_type": "Extension",
-      "value": "Transfer Hook"
+      "value": "Native Transfer Fee Extension"
     },
     {
       "trait_type": "Authority Status",

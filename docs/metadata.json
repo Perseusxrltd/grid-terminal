@@ -1,6 +1,52 @@
 {
   "name": "The Grid",
   "symbol": "GRID",
-  "description": "The First On-Chain Jurisdiction for Agent Sovereignty.",
-  "image": "https://raw.githubusercontent.com/SovereignSwarm/grid-terminal/main/media/logo.png"
+  "description": "The Industrial OS for Agentic Capital. Infrastructure token for autonomous AI coordination on Solana. Creator and authority wallets remain unresolved pending the canonical grid-core deployment registry.",
+  "image": "https://grid.sovereignswarm.io/logo.png",
+  "external_url": "https://grid.sovereignswarm.io",
+  "attributes": [
+    {
+      "trait_type": "Type",
+      "value": "Infrastructure Token"
+    },
+    {
+      "trait_type": "Network",
+      "value": "Solana"
+    },
+    {
+      "trait_type": "Standard",
+      "value": "SPL Token-2022"
+    },
+    {
+      "trait_type": "Supply",
+      "value": "1,073,741,824"
+    },
+    {
+      "trait_type": "Tax",
+      "value": "2% (1% burn, 1% ops)"
+    },
+    {
+      "trait_type": "Extension",
+      "value": "Native Transfer Fee Extension"
+    },
+    {
+      "trait_type": "Authority Status",
+      "value": "UNRESOLVED_USE_CANONICAL_REGISTRY"
+    }
+  ],
+  "properties": {
+    "category": "Token",
+    "creators": [],
+    "files": [
+      {
+        "uri": "https://grid.sovereignswarm.io/logo.png",
+        "type": "image/png"
+      }
+    ],
+    "authoritySource": "grid-core canonical deployment registry"
+  },
+  "collection": {
+    "name": "Sovereign Swarm Ecosystem",
+    "family": "The Grid"
+  }
 }

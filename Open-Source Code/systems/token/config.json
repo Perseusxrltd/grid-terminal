@@ -50,7 +50,7 @@
     "source": "grid-core canonical deployment registry"
   },
   "extensions": {
-    "transferHook": true,
+    "transferFeeConfig": true,
     "metadataPointer": true,
     "freezeAuthority": true
   },
