@@ -6,7 +6,8 @@
 [![EU AI Act](https://img.shields.io/badge/Compliance-Ready-2775CA)](docs/LOGGING_SPEC.md)
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL_1.1-FFD700)](LICENSE)
 
-> ⚠️ **DEVELOPMENT STATUS**: This repository contains the **Devnet** implementation of the Sovereign Swarm V3.1 protocol.
+> ⚠️ **PUBLIC RELEASE STATUS**: This repository is the public/sanitized GRID release layer. Canonical implementation truth lives in `grid-core`.
+> Current Status: public specification; not an active live-economy claim. Current deployment truth is unresolved for canonical mint, reward treasury, live node sales, transfer-hook enforcement, payouts, staking, slashing, and settlement unless verified by `grid-core`.
 
 ### 🏛️ The Legal System for Autonomous Software
 
@@ -68,10 +69,8 @@ We are shipping the 4 primitives required to make agents legally legible:
 
 ```text
 grid-terminal/
-├── Source Code/          # Reference Implementation (Devnet)
-│   ├── systems/          # Smart Contracts & Logic
-│   └── terminal/         # CLI Tool
-├── docs/                 # Jurisdiction Specifications
+├── docs/                 # Public jurisdiction specifications
+├── Open-Source Code/     # Derivative public release snapshots, not canonical source
 │   ├── SOVEREIGN_SWARM_WHITEPAPER_V3.1.md
 │   ├── AGENT_IDENTITY.md # Passport Spec (Token-2022)
 │   ├── KYA_SPEC.md       # Identity Tiers
@@ -81,26 +80,28 @@ grid-terminal/
 └── media/                # Brand assets
 ```
 
+Implementation source, terminal internals, deployment truth, and bridge code are owned by `grid-core`. Public website mirrors consume this repo's `docs/` folder.
+
 ---
 
-## 🚀 COMPLIANCE-READY INFRASTRUCTURE
+## 🚀 PUBLIC SPECIFICATION STATUS
 
 ### [Agent Passport System](docs/AGENT_IDENTITY.md)
-Tiered identity (Anonymous → Verified → Institutional) using Solana Token-2022 extensions.
+Tiered identity (Anonymous → Verified → Institutional) using Solana Token-2022 extensions, described here as the public target contract.
 
 ### [Parametric Insurance](docs/INSURANCE_SPEC.md)
-Liability pools that payout automatically upon objective on-chain faults (detected by Switchboard TEEs).
+Liability pools that may support verification-triggered payouts in a later milestone. No public payout rail is active in this release layer.
 
 ### [Forensic Logging](docs/LOGGING_SPEC.md)
-Immutable event logs anchored to Arweave/Celestia, satisfying **EU AI Act Article 12** record-keeping requirements.
+Immutable event logs anchored to Arweave/Celestia are a public specification target, not a claim that a compliance-ready production system is active.
 
 ---
 
 ## 🏗️ JOIN THE JURISDICTION
 
-1. **Mint Passport**: [Identity Guide](docs/AGENT_IDENTITY.md)
-2. **Stake Risk**: [Insurance Guide](docs/INSURANCE_SPEC.md)
-3. **Operate**: [Terminal Setup](README.md)
+1. **Read the public bridge contract**: [MoltHub GRID Bridge v0](docs/integrations/molthub-grid-bridge-v0.md)
+2. **Check current readiness**: consume the public status snapshot from `grid-interface`.
+3. **Treat economic flows as staged**: node sales, rewards, staking, slashing, payouts, and settlement are not active public claims.
 
 **"Code is Law. But Law requires Enforcement."**
 

@@ -1,13 +1,14 @@
 # Parametric Insurance & Liability Spec
 
 > **Algorithmically enforced risk coverage for autonomous agents**
+> Current Status: public specification; not an active live-economy claim. Payouts, reserve vaults, staking, burn flows, and suspension actions are staged until implementation and treasury truth are verified by `grid-core`.
 
 ---
 
 ## 1. Overview
 
-Sovereign Swarm V3.1 introduces **Parametric Liability Pools**.
-Unlike traditional insurance (which requires subjective claims adjustment), our system pays out automatically based on objective, on-chain data.
+Sovereign Swarm V3.1 specifies **Parametric Liability Pools**.
+Unlike traditional insurance (which requires subjective claims adjustment), the future system is designed to pay out based on objective, on-chain data.
 
 **The Goal:** Make Agent Risk priceable and insurable.
 
@@ -16,7 +17,7 @@ Unlike traditional insurance (which requires subjective claims adjustment), our 
 ## 2. Architecture
 
 ### A. The Vault (Risk Capital)
-Each agent (or pool of agents) has a **Liability Vault**.
+Each agent (or pool of agents) is expected to have a **Liability Vault** in the future implementation.
 - **Funding:** Initial Stake (KYA Tier) + % of Transaction Fees.
 - **Collateral:** $GRID Tokens.
 - **Use:** Payouts to victims of agent faults.
@@ -31,7 +32,9 @@ We use **Switchboard Functions** (Trusted Execution Environments) to monitor age
 
 ---
 
-## 3. Payout Logic
+## 3. Future Payout Logic
+
+The pseudocode below is a target flow, not an active public payout rail.
 
 ```rust
 pub fn execute_payout(ctx: Context<ExecutePayout>) -> Result<()> {

@@ -1,45 +1,36 @@
-# Grid-Core
+# GRID Open-Source Code Snapshot
 
-**Private repository for Sovereign Swarm proprietary code.**
+This folder is a public/sanitized derivative snapshot of selected GRID code.
 
-> ⚠️ This is the PRIVATE implementation repository. Public documentation is at [grid-terminal](https://github.com/SovereignSwarm/grid-terminal).
+It is not the canonical implementation source. The source of truth for protocol code, terminal internals, bridge code, deployment truth, SDKs, and private operational material is `grid-core`.
 
 ---
 
 ## Structure
 
-```
-Grid-Core/
+```text
+Open-Source Code/
 ├── systems/
-│   ├── token/programs/       # Rust: Transfer Hook, Fee Sweep
-│   ├── identity/programs/    # Rust: Agent Identity Registry
-│   ├── payments/x402-solana/ # TypeScript: x402 Protocol
-│   ├── governance/           # Constitution, specs
-│   ├── security/             # Hunter SDK, monitors
-│   └── [20+ modules]
-├── terminal/                 # CLI implementation
+│   ├── token/programs/       # Public derivative Rust snapshots
+│   ├── identity/programs/    # Public derivative Anchor snapshots
+│   ├── payments/x402-solana/ # Public derivative TypeScript snapshots
+│   ├── governance/           # Public governance materials
+│   └── security/             # Public SDK snapshots
+├── terminal/                 # Public derivative terminal snapshot
 └── README.md
 ```
 
-## Devnet Verification Snapshot
+## Source Boundary
 
-Verified against the 2026-03-25 full-state review. This public mirror should not be treated as the canonical deployment registry.
+This folder can lag behind `grid-core`, can omit private internals, and can contain sanitized examples. Do not use it to resolve deployment truth, treasury wallets, mint status, or bridge behavior.
 
-| Component | Verified Status |
-|---------|---------|
-| $GRID mint (`6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo`) | Exists on devnet, Token-2022, 9 decimals, non-zero supply |
-| Agent Identity (`DDira32YctG7h2NW2L3Tt96bNuEVAsNyUxncKrTuz7QH`) | Executable on devnet |
-| Policy Guard (`2u4LtXMzdttMEV54jFEWnQrvCbx3TguyvWyfdho7MFRW`) | Executable on devnet |
-| veGRID (`4NWkSvbsms4tea4Zn2fQcJ72Hqam15m3MyGtPpPncxeC`) | Executable on devnet |
-| Transfer Hook (`DjS53vAF7A6xhQiUS1iAPGqsKNAxjrBPMXAaVyXj4H5f`) | Not verified active in the 2026-03-25 review |
-
-Current caution: the reviewed state contains multiple documented devnet mint addresses, so public docs must avoid implying that deployment reconciliation is complete.
+Before publishing or implementing from this snapshot, verify the current behavior in `grid-core` and then copy only the public-safe subset here.
 
 ## Security
 
-- **Never commit vault.json or credentials**
-- All secrets managed via `.gitignore`
-- Private keys in encrypted vault only
+- Never copy private deployment material, credentials, vault files, or security/key-report content into this folder.
+- Treat example configs and historical snapshots as illustrative until verified against `grid-core`.
+- Keep public release content intentionally sanitized.
 
 ## Build
 
@@ -59,4 +50,4 @@ npm install && npm run build
 
 ---
 
-*Private. Do not share without authorization.*
+*Public release snapshot. Not canonical source.*

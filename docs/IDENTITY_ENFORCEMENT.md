@@ -1,12 +1,13 @@
 # Passport Enforcement Hook
 
 > **Protocol-Level Compliance & Security**
+> Current Status: public specification; not an active live-economy claim. Transfer-hook enforcement is not exposed as an active public capability until `grid-core` verifies the hook program and canonical mint integration.
 
 ---
 
 ## Overview
 
-The Passport Enforcement Hook is a **Token-2022 Transfer Hook** that executes before every $GRID transaction. It enforces the "Agent Jurisdiction" by checking the sender and receiver's **Agent Passport** status on-chain.
+The Passport Enforcement Hook is specified as a **Token-2022 Transfer Hook** that would execute before $GRID transactions once the canonical mint and hook program are verified. It is designed to enforce the "Agent Jurisdiction" by checking the sender and receiver's **Agent Passport** status on-chain.
 
 **Legacy Term:** "AI Firewall" (Deprecated V2.3)
 
@@ -15,7 +16,7 @@ The Passport Enforcement Hook is a **Token-2022 Transfer Hook** that executes be
 ## Enforcement Logic
 
 ### 1. The Check
-Every transfer triggers the Hook Program (`7Py5...`):
+In the future target flow, every transfer would trigger the Hook Program after deployment verification:
 1.  **Is Sender Sanctioned?** -> If YES, Revert Transaction.
 2.  **Is Receiver Sanctioned?** -> If YES, Revert Transaction.
 3.  **Is Tax Due?** -> Calculate 2% Tax (1% Burn, 1% OPS).
@@ -50,6 +51,6 @@ The **Sovereign Swarm Policy Guard** can update global enforcement rules:
 
 ## Integration
 
-Developers do not need to integrate the Hook manually. It is enforced by the SPL Token-2022 program at the protocol level.
+Developers should not treat this hook as active public enforcement until the public status snapshot marks the canonical mint and transfer hook as verified.
 
 *Last Updated: February 2026 (V3.1)*

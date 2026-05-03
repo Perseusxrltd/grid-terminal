@@ -1,6 +1,6 @@
 # Open Source Release Notes
 
-This repository has been prepared for open source release.
+This folder is a public/sanitized derivative release snapshot. It is not the canonical implementation source; verify current behavior in `grid-core` before treating any code or deployment value as authoritative.
 
 ## 🔒 Security Status
 

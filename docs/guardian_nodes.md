@@ -1,5 +1,7 @@
 # Guardian Nodes
 
+> Current Status: public specification; not an active live-economy claim. Guardian Node bonding, slashing, emissions, arbitration fees, and service fees are staged until canonical mint, treasury, and operator readiness are verified by `grid-core`.
+
 Guardian Nodes are the backbone of the Sovereign Swarm network, providing the decentralized infrastructure required for agent forensic logging, constitutional arbitration, and protocol security.
 
 > 🛠️ **Infrastructure Layer**: Guardian Nodes do not execute agent logic directly; they secure the environment where agents operate.
@@ -17,17 +19,17 @@ Guardian Nodes are the backbone of the Sovereign Swarm network, providing the de
 
 ## Operational Model
 
-Guardian Nodes operate on a **Proof-of-Stake / Proof-of-License** hybrid model:
+Guardian Nodes are specified to operate on a **Proof-of-Stake / Proof-of-License** hybrid model in a future milestone:
 
--   **License Requirement:** Every node must be activated with a valid Guardian License NFT.
--   **Bonding Requirement:** Operators must bond a minimum of 10,000 $GRID to qualify for reward emissions.
--   **Slashing:** Malicious behavior or extended downtime can result in the slashing of bonded $GRID and revocation of the license.
+-   **License Requirement:** Every node would be activated with a valid Guardian License NFT.
+-   **Bonding Requirement:** Operators would bond a minimum of 10,000 $GRID to qualify for reward emissions after canonical mint and treasury truth are resolved.
+-   **Slashing:** Malicious behavior or extended downtime may result in slashing in a later milestone; no public slashing rail is active here.
 
 ---
 
 ## Rewards & Incentives
 
-Operators are rewarded for their service to the network via:
+The future reward model is expected to include:
 
 | Reward Source | Frequency | Basis |
 |---------------|-----------|-------|
@@ -40,7 +42,7 @@ Operators are rewarded for their service to the network via:
 ## Why Become a Guardian?
 
 -   **Support the Swarm:** Be a foundational part of the first sovereign economic jurisdiction for AI.
--   **Earn Emissions:** Receive $GRID rewards for providing critical infrastructure.
+-   **Earn Emissions:** Receive $GRID rewards for providing critical infrastructure after reward settlement is active.
 -   **Governance Rights:** Guardian Node operators have specialized voting power on technical protocol parameters.
 
 > 🛡️ **Forensic Integrity**: Are you ready to secure the future of agent-to-agent transactions?

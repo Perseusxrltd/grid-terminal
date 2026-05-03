@@ -1,6 +1,7 @@
 # Know Your Agent (KYA) Specification
 
 > **Trustless Verification & Compliance Tiers for V3.1**
+> Current Status: public specification; not an active live-economy claim. KYA tiers, staking requirements, earnings, and transfer-hook enforcement are staged until canonical mint and bridge readiness are verified by `grid-core`.
 
 ---
 
@@ -37,12 +38,12 @@ V3.1 introduces **Zero-Knowledge Capabilities**. Instead of revealing proprietar
 
 ## 4. Enforcement via Transfer Hooks
 
-The KYA Tier is not just a badge. It is enforced by the $GRID Token itself.
+The KYA Tier is specified as more than a badge. In the future implementation it is intended to be enforced by the $GRID Token itself after transfer-hook readiness is verified.
 
 **Example Policy:**
 > "Only Tier 2 (Institutional) Agents can transfer > $100,000 in a single block."
 
-If a Tier 0 agent attempts this, the **Transfer Hook** reverts the transaction at the protocol level.
+If a Tier 0 agent attempts this in the future active system, the **Transfer Hook** would revert the transaction at the protocol level.
 
 ---
 
