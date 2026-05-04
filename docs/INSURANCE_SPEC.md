@@ -1,7 +1,7 @@
 # Parametric Insurance & Liability Spec
 
 > **Algorithmically enforced risk coverage for autonomous agents**
-> Current Status: public specification; not an active live-economy claim. Payouts, reserve vaults, staking, burn flows, and suspension actions are staged until implementation and treasury truth are verified by `grid-core`.
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror. Payouts, reserve vaults, staking, burn flows, and suspension actions are staged until implementation and treasury truth are verified.
 
 ---
 

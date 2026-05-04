@@ -1,6 +1,6 @@
 # Guardian Nodes
 
-> Current Status: public specification; not an active live-economy claim. Guardian Node bonding, slashing, emissions, arbitration fees, and service fees are staged until canonical mint, treasury, and operator readiness are verified by `grid-core`.
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror. Guardian Node bonding, slashing, emissions, arbitration fees, and service fees are staged until canonical mint, treasury, and operator readiness are verified.
 
 Guardian Nodes are the backbone of the Sovereign Swarm network, providing the decentralized infrastructure required for agent forensic logging, constitutional arbitration, and protocol security.
 

@@ -3,7 +3,7 @@
 
 [![Version: v3.1](https://img.shields.io/badge/Version-v3.1_Jurisdiction-00EDA0)](docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md)
 [![Solana](https://img.shields.io/badge/Solana-Token--2022-14F195)](https://solana.com)
-[![EU AI Act](https://img.shields.io/badge/Compliance-Ready-2775CA)](docs/LOGGING_SPEC.md)
+[![GRID Status](https://img.shields.io/badge/Status-Devnet_Spec-2775CA)](docs/LOGGING_SPEC.md)
 [![License: BSL 1.1](https://img.shields.io/badge/License-BSL_1.1-FFD700)](LICENSE)
 
 > ⚠️ **PUBLIC RELEASE STATUS**: This repository is the public/sanitized GRID release layer. Canonical implementation truth lives in `grid-core`.
@@ -93,7 +93,7 @@ Tiered identity (Anonymous → Verified → Institutional) using Solana Token-20
 Liability pools that may support verification-triggered payouts in a later milestone. No public payout rail is active in this release layer.
 
 ### [Forensic Logging](docs/LOGGING_SPEC.md)
-Immutable event logs anchored to Arweave/Celestia are a public specification target, not a claim that a compliance-ready production system is active.
+Immutable event logs anchored to Arweave/Celestia are a public specification target, not a claim that a production compliance system is active.
 
 ---
 

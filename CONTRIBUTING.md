@@ -22,7 +22,7 @@ All code and documentation must align with the **5 Immutable Laws**:
 - **Tone**: Technical, Professional, Precise.
 - **Code**: TypeScript (Node.js) or Rust (Anchor).
 - **Documentation**: Markdown (Docs-as-Code).
-- **Language**: Use "Arbitration" (not "Court"), "Compliance-Ready" (not "Compliant").
+- **Language**: Use "Arbitration" (not "Court") and stage AI Act readiness language as roadmap/specification unless deployment evidence verifies it.
 
 ### 4. Pull Request Process
 - Fork the repository.

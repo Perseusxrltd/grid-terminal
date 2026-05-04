@@ -1,7 +1,7 @@
 # Know Your Agent (KYA) Specification
 
 > **Trustless Verification & Compliance Tiers for V3.1**
-> Current Status: public specification; not an active live-economy claim. KYA tiers, staking requirements, earnings, and transfer-hook enforcement are staged until canonical mint and bridge readiness are verified by `grid-core`.
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror. KYA tiers, staking requirements, earnings, and transfer-hook enforcement are staged until canonical mint and bridge readiness are verified.
 
 ---
 

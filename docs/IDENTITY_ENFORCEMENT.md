@@ -1,7 +1,7 @@
 # Passport Enforcement Hook
 
 > **Protocol-Level Compliance & Security**
-> Current Status: public specification; not an active live-economy claim. Transfer-hook enforcement is not exposed as an active public capability until `grid-core` verifies the hook program and canonical mint integration.
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror. Transfer-hook enforcement is not exposed as an active public capability until the hook program and canonical mint integration are verified.
 
 ---
 

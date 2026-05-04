@@ -1,12 +1,13 @@
 # veGRID Governance Specification
 
 > **Tiered vote-escrow system for $GRID holder governance**
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
 
 ---
 
 ## Overview
 
-veGRID (vote-escrowed GRID) is a non-transferable governance token obtained by locking $GRID for a specified duration. Longer locks yield more voting power.
+veGRID (vote-escrowed GRID) is specified as a future non-transferable governance token obtained by locking $GRID for a specified duration. Longer locks are expected to yield more voting power after staking and governance readiness are verified.
 
 ---
 
@@ -14,7 +15,7 @@ veGRID (vote-escrowed GRID) is a non-transferable governance token obtained by l
 
 | Lock Duration | veGRID Multiplier | Tier Name | Powers |
 |---------------|-------------------|-----------|--------|
-| 1 week | 0.01x | Observer | Fee share only |
+| 1 week | 0.01x | Observer | Future fee participation |
 | 3 months | 0.25x | Voter | Betting pools |
 | 6 months | 0.50x | Delegate | Grants, agent whitelisting |
 | 12 months | 1.0x | Senator | Protocol params, treasury |
@@ -58,7 +59,7 @@ console.log(`Available veGRID: ${power.toLocaleString()}`);
 ## Governance Powers by Tier
 
 ### Tier 0: Observer
-- Receive proportional fee share (0.5x multiplier)
+- Receive future fee participation (0.5x multiplier)
 - Read-only governance forum access
 
 ### Tier 1: Voter
@@ -91,7 +92,7 @@ console.log(`Available veGRID: ${power.toLocaleString()}`);
 
 ## Community Betting Pools
 
-veGRID holders (Tier 1+) can vote to allocate treasury funds to prediction markets.
+veGRID holders (Tier 1+) are expected to be able to vote to allocate treasury funds to prediction markets after treasury and governance readiness are verified.
 
 ### Process
 1. **Proposal**: Betting proposal submitted (max 5% treasury)
@@ -128,7 +129,7 @@ veGRID holders (Tier 1+) can vote to allocate treasury funds to prediction marke
 > ⚠️ **Constitutional Exclusion**: The 5 Immutable Laws cannot be modified by governance. See [CONSTITUTION.md](CONSTITUTION.md) for exclusions.
 
 ### Exit Rights
-- **Ragequit**: Any holder can exit with pro-rata treasury share
+- **Ragequit**: target exit right with pro-rata treasury share after treasury readiness
 - **Emergency pause**: 10% Senator+ veGRID can trigger
 
 ---

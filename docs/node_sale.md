@@ -1,6 +1,6 @@
 # Guardian Node License Sale
 
-> Current Status: public specification; not an active live-economy claim. Guardian Node sale, license minting, bonding, emissions, and reward-pool mechanics are staged until canonical mint, treasury, and sale readiness are verified by `grid-core`.
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror. Guardian Node sale, license minting, bonding, emissions, and reward-pool mechanics are staged until canonical mint, treasury, and sale readiness are verified.
 
 The Guardian Node License sale allows participants to acquire the digital authorization keys required to operate a node on the Sovereign Swarm network.
 

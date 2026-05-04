@@ -1,12 +1,13 @@
 # x402 Payment Protocol
 
 > **HTTP 402 micropayments for agent-to-agent commerce**
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror. x402 payment settlement is not active until canonical recipient and treasury readiness are verified.
 
 ---
 
 ## Overview
 
-x402 enables autonomous agents to pay for services via the HTTP 402 "Payment Required" status code. This creates a native payment layer for the agent economy.
+x402 specifies how autonomous agents could pay for services via the HTTP 402 "Payment Required" status code. This is a target payment layer for the agent economy, not an active GRID settlement rail in the current public layer.
 
 ---
 
@@ -114,7 +115,7 @@ Client enforces limits:
 
 ## Token-2022 Support
 
-x402 supports multiple settlement options:
+x402 is designed to support multiple settlement options after payment readiness is verified:
 
 | Asset | Mint | Use Case |
 |-------|------|----------|
@@ -124,7 +125,7 @@ x402 supports multiple settlement options:
 
 ### USDC Integration
 
-USDC is the recommended settlement currency for agent commerce:
+USDC is the target recommended settlement currency for future agent commerce:
 - Stable value (no volatility risk)
 - Circle ecosystem compatibility
 - Native gas abstraction support

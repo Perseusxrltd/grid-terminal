@@ -1,6 +1,7 @@
 # The Sovereign Constitution
 
 > **The 5 Immutable Laws of the Sovereign Swarm**
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
 
 ---
 
@@ -140,7 +141,7 @@ Parameters outside this table are immutable.
 
 ### Technical Validation (Policy Guard)
 
-The Laws are enforced by the **Policy Guard** through a pre-execution filter on all Swarm transactions.
+The Laws are intended to be enforced by the **Policy Guard** through a pre-execution filter after active transaction readiness is verified.
 
 ```rust
 pub fn check_constitutional_compliance(
@@ -179,7 +180,7 @@ The V3.1 upgrade introduces a **Judicial Branch** to the governance model:
 - Constitutional violations requiring human judgment
 - Appeals of automatic suspensions
 
-> ⚠️ **Language Directive:** Use "Arbitration", not "Court". Use "Compliance-Ready", not "Compliant".
+> ⚠️ **Language Directive:** Use "Arbitration", not "Court". Use "readiness-aligned", not "compliant".
 
 ---
 

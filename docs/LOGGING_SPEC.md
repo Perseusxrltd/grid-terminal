@@ -1,6 +1,7 @@
 # Forensic Logging Specification
 
 > **Immutable Audit Trails for EU AI Act Compliance**
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
 
 ---
 
@@ -9,7 +10,7 @@
 **EU AI Act, Article 12:**
 > "High-risk AI systems shall be designed and developed with capabilities enabling the automatic recording of events ('logs') over the duration of the system's life. These logs must be traceable to the functioning of the AI system."
 
-Sovereign Swarm V3.1 provides the **Technical Rails** to satisfy this requirement via decentralized infrastructure.
+Sovereign Swarm V3.1 specifies **Technical Rails** intended to support this requirement via decentralized infrastructure.
 
 ---
 
@@ -74,4 +75,4 @@ If the hashes match, the log is **Admissible Forensic Evidence**.
 
 ---
 
-*Verified by Grid Protocol | V3.1*
+*Specified by Grid Protocol | V3.1*

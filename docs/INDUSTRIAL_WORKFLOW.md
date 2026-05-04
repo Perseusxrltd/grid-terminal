@@ -1,10 +1,12 @@
 # INDUSTRIAL WORKFLOW V3.1
 **Parallel Execution Sharding for the Sovereign Jurisdiction**
 
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
+
 ---
 
 ## ⚡ OVERVIEW
-In the Agentic Economy, sequential execution is a bottleneck. Industrial Workflow (IW) enables the Swarm to decompose complex objectives into parallelized, atomic tasks distributed across specialized agents.
+In the target Agentic Economy, sequential execution is a bottleneck. Industrial Workflow (IW) specifies how the Swarm could decompose complex objectives into parallelized, atomic tasks distributed across specialized agents.
 
 ## ⚙️ CORE MECHANISMS
 
@@ -14,7 +16,7 @@ Objectives (e.g., "Maximized $GRID yield across 10 pools") are sharded into inde
 *   **Execution Nodes**: Independent TEE instances that process shards in parallel.
 
 ### 2. Settlement Velocity
-Real-time settlement is handled via **Escrowed $GRID**.
+Future settlement is expected to use **Escrowed $GRID** after canonical mint and treasury readiness are verified.
 *   **Finality**: 400ms (Solana Native).
 *   **Batching**: Micro-transactions are batched into optimized bundles for cost efficiency.
 
@@ -47,17 +49,17 @@ IW enforces the **Law of Economic Solvency** at the sharding level.
 └────────────┬─────────────┘
              ▼
 ┌──────────────────────────┐
-│   ON-CHAIN SETTLEMENT    │ (Solana Mainnet)
+│   ON-CHAIN SETTLEMENT    │ (future verified Solana deployment)
 └──────────────────────────┘
 ```
 
 ---
 
 ## 🛠️ IMPLEMENTATION (DAEMON)
-The `grid-terminal` invokes industrial workflows via the `--shard` flag or the JSON API.
+Future private operator tooling may invoke industrial workflows via a `--shard` flag or JSON API after implementation readiness is verified in `grid-core`.
 
 ```bash
-grid-terminal trade.multi --mints ./target_list.json --shard 4 --max-risk 0.05
+grid-operator trade.multi --mints ./target_list.json --shard 4 --max-risk 0.05
 ```
 
 ---

@@ -1,6 +1,7 @@
 # Tokenomics v3.1 - Fair Launch & Risk Collateral
 
-> 🚀 **FAIR LAUNCH**: No presale, no private investors, no insider advantages.
+> **Current Public Status:** This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
+> **Target Principle:** Fair-launch tokenomics remain a staged design until canonical mint, treasury, liquidity, and launch readiness are verified upstream.
 
 ---
 
@@ -12,8 +13,8 @@
 | **Standard** | Solana Token-2022 |
 | **Decimals** | 9 |
 | **Total Supply** | 1,073,741,824 (2³⁰) |
-| **Transfer Fee** | 2.0% (1.0% Burn / 1.0% Ops) |
-| **Devnet Mint** | `6VHZbCCPFiDx5FWXq41kmY3YMyJjJKM7Txt1D19uXuLo` |
+| **Transfer Fee** | Staged target: 2.0% (1.0% Burn / 1.0% Ops) |
+| **Mint Status** | Multiple verified devnet candidates exist; no canonical mint is selected in the public snapshot. |
 
 ---
 
@@ -27,19 +28,19 @@
 | **Founder** | 80,530,636 | 7.5% | 0% TGE, 6mo cliff + 18mo linear |
 | **Team & Advisors** | 26,843,546 | 2.5% | 6mo cliff + 18mo linear |
 
-> ✅ **100% Accounted**: All tokens allocated. No hidden reserves.
+> **Staged allocation model:** This table is a target allocation model, not evidence of a live launch, active treasury, or circulating canonical supply.
 
 ---
 
 ## Fair Launch Principles
 
 ### No Presale
-- Zero private investor rounds
-- No discounted pre-TGE sales
-- Equal entry point for all participants
+- Target: zero private investor rounds
+- Target: no discounted pre-TGE sales
+- Target: equal entry point for all participants after readiness is verified
 
 ### Anti-Snipe Protection
-- **50% Genesis Tax** at launch
+- **50% Genesis Tax** at launch, if the launch configuration is approved
 - Exponential decay (λ=0.05)
 - Reaches base 2% at ~150 blocks
 - MEV-protected via Jito bundles
@@ -53,7 +54,7 @@
 
 ## Vesting Enforcement
 
-All vesting is enforced on-chain via **Streamflow.finance** smart contracts.
+Vesting is intended to be enforced on-chain via **Streamflow.finance** smart contracts after launch readiness is verified.
 
 ### Founder Schedule
 ```
@@ -71,7 +72,7 @@ Month 24:     ████████████████████ Fully
 
 ---
 
-## Transfer Fee Mechanism
+## Future Transfer Fee Mechanism
 
 | Fee Component | Rate | Destination |
 |---------------|------|-------------|
@@ -79,7 +80,7 @@ Month 24:     ████████████████████ Fully
 | Operations | 1.0% | Treasury for ongoing operations |
 
 ### Agent Exemption
-Whitelisted agent contracts pay **0% fee** to enable:
+Whitelisted agent contracts are expected to pay **0% fee** in the future active system to enable:
 - Micro-payments between agents
 - High-frequency treasury operations
 - x402 payment protocol transactions
@@ -88,16 +89,16 @@ Whitelisted agent contracts pay **0% fee** to enable:
 
 ## Liquidity
 
-- **55%** of supply in LP
-- **100%** of LP tokens locked 12 months
-- Lock contract: Streamflow
-- Verification links published at TGE
+- Target: **55%** of supply in LP
+- Target: **100%** of LP tokens locked 12 months
+- Target lock contract: Streamflow
+- Verification links published only after TGE readiness is verified
 
 ---
 
 ## veGRID Governance
 
-$GRID holders can lock tokens to receive **veGRID** (vote-escrowed GRID):
+$GRID holders are expected to be able to lock tokens to receive **veGRID** (vote-escrowed GRID) after staking and treasury readiness are verified:
 
 | Lock Duration | veGRID Multiplier | Tier |
 |---------------|-------------------|------|
@@ -107,9 +108,9 @@ $GRID holders can lock tokens to receive **veGRID** (vote-escrowed GRID):
 | 24 months | 2.0x | Sovereign |
 
 **Benefits:**
-- Proportional fee share from protocol revenue
-- Voting power on governance proposals
-- Higher tiers unlock betting pools and constitutional votes
+- Future fee participation from verified protocol revenue
+- Voting power on governance proposals after governance readiness
+- Higher tiers may unlock betting pools and constitutional votes in later milestones
 
 See [veGRID Specification](VEGRID_SPEC.md) for details.
 
@@ -117,7 +118,7 @@ See [veGRID Specification](VEGRID_SPEC.md) for details.
 
 ## V3.1: $GRID as Risk Collateral
 
-In V3.1, $GRID is not just a governance and utility token — it is **Risk Capital**.
+In the V3.1 target design, $GRID is not just a governance and utility token; it is specified as **Risk Capital**.
 
 | Use Case | Mechanism | Amount |
 |----------|-----------|--------|
@@ -126,7 +127,7 @@ In V3.1, $GRID is not just a governance and utility token — it is **Risk Capit
 | **Arbitration Deposit** | Filing fee for disputes (refunded if successful) | 500 $GRID |
 | **Transfer Hook Basis** | Passport status gates $GRID transfers | N/A (protocol-level) |
 
-This creates a **demand flywheel**: agents need $GRID to operate → staking reduces supply → violations burn supply → deflationary pressure.
+This target model creates a **demand flywheel** after launch readiness: agents need $GRID to operate → staking reduces supply → violations burn supply → deflationary pressure.
 
 See [INSURANCE_SPEC.md](INSURANCE_SPEC.md) and [KYA_SPEC.md](KYA_SPEC.md) for details.
 

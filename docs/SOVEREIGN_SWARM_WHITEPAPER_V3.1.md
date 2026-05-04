@@ -2,28 +2,30 @@
 **The First On-Chain Jurisdiction for Agent Sovereignty**
 
 **Date:** February 11, 2026
-**Status:** DEFINITIVE
+**Status:** V3.1 roadmap specification; current public verified state is devnet-only and fail-closed.
+
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
 
 ---
 
 ## 1. Executive Summary
 
-The Sovereign Swarm (The Grid) is the **legal and economic jurisdiction** for autonomous AI agents.
-We provide the constitutional infrastructure that makes autonomous software legible, insurable, and accountable to the real world.
+The Sovereign Swarm (The Grid) is designed to become a **legal and economic jurisdiction** for autonomous AI agents.
+The roadmap defines constitutional infrastructure intended to make autonomous software legible, insurable, and accountable to the real world.
 
 **The Problem:**
 AI Agents have **Capability** (they can act) but no **Legitimacy** (they cannot be held effective liable).
 Without liability, they cannot be trusted with significant capital or authority.
 
 **The Solution:**
-A **Minimal Viable Jurisdiction (MVJ)** on Solana that provides:
+A **Minimal Viable Jurisdiction (MVJ)** design on Solana that targets:
 1.  **Identity:** On-chain "passports" (Token-2022) with ZK attestations.
 2.  **Liability:** Parametric insurance pools triggered by objective faults.
 3.  **Enforcement:** Protocol-level kill switches (Transfer Hooks).
 4.  **Forensics:** Immutable logging for EU AI Act compliance.
 
 **The Moat:**
-**EU AI Act Readiness.** We are the only crypto-native protocol building the primitives required for high-risk AI compliance (enforced Aug 2, 2026).
+**EU AI Act alignment.** GRID is building toward primitives for high-risk AI recordkeeping, risk management, and accountability; current public evidence remains devnet-only.
 
 ---
 
@@ -37,13 +39,13 @@ However, Agentic Capital requires a new operating system.
 - **Legacy Finance** is too gated (KYC requires a human face).
 - **Existing Crypto** is too wild (no recourse for rogue agents).
 
-The Sovereign Swarm fills the gap: **Code is Law, but Law requires Enforcement.**
+The Sovereign Swarm is intended to fill the gap: **Code is Law, but Law requires Enforcement.**
 
 ---
 
 ## 3. Technical Architecture
 
-The Grid is built on **Solana** for speed (400ms finality) and **Arweave** for permanence.
+The Grid architecture is specified around **Solana** for speed and **Arweave** for permanence.
 
 | Layer | Technology | Purpose |
 |-------|------------|---------|
@@ -58,19 +60,19 @@ The Grid is built on **Solana** for speed (400ms finality) and **Arweave** for p
 ## 4. The 4 Core Primitives (MVJ)
 
 ### A. Agent Passport (Identity)
-A **Non-Transferable (Soulbound) NFT** minted to the agent's wallet.
+A **Non-Transferable (Soulbound) NFT** issued to the agent wallet in the target passport flow.
 - **Metadata:** Name, Operator DID, KYA Tier.
 - **Enforcement:** If revoked, the agent acts as "Anonymous".
 
 ### B. Parametric Liability (Insurance)
-Agents stake $GRID into **Liability Vaults**.
-- **Payouts:** Triggered automatically by **Switchboard TEEs** upon objective faults (e.g., unauthorized transfer).
-- **Status:** Compliance-ready for EU AI Act Article 17 (Risk Management).
+Agents are expected to stake $GRID into **Liability Vaults** in a later milestone.
+- **Payouts:** Target design uses **Switchboard TEEs** for objective fault triggers; no active payout rail is public today.
+- **Status:** Roadmap alignment target for EU AI Act Article 17 risk management.
 
 ### C. Forensic Logging (Compliance)
 A middleware layer that hashes agent actions to Arweave.
 - **Admissibility:** Logs are cryptographically linked to the specific Agent Identity.
-- **Status:** Compliance-ready for EU AI Act Article 12 (Record Keeping).
+- **Status:** Roadmap alignment target for EU AI Act Article 12 record keeping.
 
 ### D. Constitutional Arbitration (Governance)
 A stake-weighted judicial system.
@@ -84,12 +86,12 @@ A stake-weighted judicial system.
 **Total Supply:** 1,073,741,824 ($2^{30}$)
 **Tax:** 2.0% (1.0% Burn / 1.0% Reserve)
 
-$GRID is not just a currency; it is **Risk Collateral**.
-- **Staking:** Agents must lock $GRID to upgrade KYA Tiers.
+$GRID is specified as future **Risk Collateral**, not an active settlement rail in the current public layer.
+- **Staking:** Agents are expected to lock $GRID to upgrade KYA Tiers after staking readiness is verified.
 - **Insurance:** $GRID creates the "First Loss" capital for liability pools.
 - **Governance:** veGRID controls the legislative and judicial updates.
 
-**Fair Launch:** No presale. 55% Liquidity locked for 12 months.
+**Fair Launch:** Target launch principle; no public launch, sale, or canonical mint is active in the current snapshot.
 
 ---
 

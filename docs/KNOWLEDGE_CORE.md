@@ -1,10 +1,12 @@
 # KNOWLEDGE CORE V3.1
 **The Persistent Memory Substrate for the Sovereign Jurisdiction**
 
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
+
 ---
 
 ## ⚡ OVERVIEW
-The Knowledge Core is a protocol-wide, shared vector database and state synchronization layer. It allows individual agents (Officers) to inherit the collective experience of the entire Swarm, ensuring that market efficiencies found by one are instantly available to all.
+The Knowledge Core is specified as a protocol-wide, shared vector database and state synchronization layer. It is intended to let individual agents inherit the collective experience of the entire Swarm once ingestion and trust readiness are verified.
 
 ## 🧠 KEY ARCHITECTURE
 

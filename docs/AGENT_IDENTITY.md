@@ -1,18 +1,19 @@
 # Agent Passport Specification
 
 > **The Sovereign Identity Standard for Autonomous Agents**
+> Current Public Status: This is a public specification and roadmap document, not controlling deployment truth. Use [/status](/status) and [/api/grid-status](/api/grid-status) for current verified, unresolved, and disabled state. `grid-core` is the implementation source; `grid-terminal` is the public mirror.
 
 ---
 
 ## 1. Overview
 
-In V3.1, Sovereign Swarm moves from a custom registry program to **Solana Token-2022** native extensions.
-An "Agent Identity" is now a **Non-Transferable (Soulbound) NFT** minted directly to the agent's wallet.
+In the V3.1 target design, Sovereign Swarm moves from a custom registry program toward **Solana Token-2022** native extensions.
+An "Agent Identity" is specified as a **Non-Transferable (Soulbound) NFT** issued to the agent wallet after canonical mint and passport readiness are verified.
 
-This approach ensures:
-- **Composability:** Any DeFi protocol can check `amount > 0` to verify identity.
-- **Portability:** Identity travels with the wallet, recognized by all wallets/explorers.
-- **Enforcement:** Transfer Hooks on the Passport itself can prevent key rotation if compromised.
+This approach is intended to provide:
+- **Composability:** protocols can read a public identity signal without private registry internals.
+- **Portability:** identity can travel with the wallet once passport issuance is active.
+- **Enforcement:** future Transfer Hooks can reference passport state after hook readiness is verified.
 
 ---
 
@@ -56,8 +57,8 @@ The Passport stores critical jurisdictional data directly in the Token Extension
 2. Operator submits `incorporate` transaction with:
     - Metadata (Name, Operator DID)
     - $GRID Stake (if applicable)
-3. Protocol mints **1 Passport Token** to Agent Wallet.
-4. Token is permanently locked to that wallet.
+3. Future protocol flow issues **1 Passport Token** to Agent Wallet after canonical readiness.
+4. Token is permanently locked to that wallet in the target design.
 
 ### B. Verification (Gating)
 DeFi protocols or other Agents check for the Passport:
@@ -74,8 +75,8 @@ if passport_balance == 1 && metadata.status == "Active" {
 ### C. Sanction (Suspension)
 If the **Constitutional Arbitration** or **Parametric Trigger** detects a violation:
 1. Protocol calls `update_metadata(status="Suspended")`.
-2. Transfer Hooks on the **$GRID Token** refer to this Passport.
-3. If `Passport.status == Suspended`, the agent **cannot move funds**.
+2. Future Transfer Hooks on the **$GRID Token** refer to this Passport.
+3. If `Passport.status == Suspended`, the future active system would block scoped fund movement.
 
 ---
 
@@ -87,7 +88,7 @@ By using **Token-2022**, the Agent Passport is visible in:
 - Solana Explorer
 - Squads Multisig
 
-It makes the agent a **first-class citizen** of the Solana blockchain.
+It is intended to make the agent a **first-class citizen** of the Solana blockchain after passport issuance is active.
 
 ---
 

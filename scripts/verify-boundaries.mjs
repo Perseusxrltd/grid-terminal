@@ -28,8 +28,13 @@ function assertFutureSpecDisclaimer(relativePath) {
   const content = readText(relativePath);
   assert.match(
     content,
-    /Current Status: public specification; not an active live-economy claim\./i,
-    `${relativePath} must label future economics/enforcement as non-active public specification`,
+    /Current (?:Public )?Status:/i,
+    `${relativePath} must label current public status`,
+  );
+  assert.match(
+    content,
+    /not (?:controlling deployment truth|an active live-economy claim)/i,
+    `${relativePath} must label future economics/enforcement as non-controlling or non-active`,
   );
 }
 
@@ -84,6 +89,9 @@ describe('GRID terminal public release boundary', () => {
       'docs/INSURANCE_SPEC.md',
       'docs/IDENTITY_ENFORCEMENT.md',
       'docs/KYA_SPEC.md',
+      'docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md',
+      'docs/INDUSTRIAL_WORKFLOW.md',
+      'docs/legal_terms.md',
     ]) {
       assertFutureSpecDisclaimer(file);
     }
@@ -95,5 +103,32 @@ describe('GRID terminal public release boundary', () => {
     const readme = readText('README.md');
     assert.doesNotMatch(readme, /COMPLIANCE-READY INFRASTRUCTURE/i);
     assert.match(readme, /PUBLIC SPECIFICATION STATUS/i);
+  });
+
+  it('rejects unqualified live-economy and compliance claims in public docs', () => {
+    const publicDocs = [
+      'README.md',
+      'CONTRIBUTING.md',
+      'docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md',
+      'docs/INDUSTRIAL_WORKFLOW.md',
+      'docs/legal_terms.md',
+      'docs/CONSTITUTION.md',
+    ];
+    const forbidden = [
+      /Status:\s*DEFINITIVE/i,
+      /Compliance-ready/i,
+      /Solana Mainnet/i,
+      /Real-time settlement is handled/i,
+      /must lock \$GRID/i,
+      /purchase of a Guardian Node License/i,
+      /Guardian Node activation software is provided/i,
+    ];
+
+    for (const file of publicDocs) {
+      const content = readText(file);
+      for (const pattern of forbidden) {
+        assert.doesNotMatch(content, pattern, `${file} contains ${pattern}`);
+      }
+    }
   });
 });
