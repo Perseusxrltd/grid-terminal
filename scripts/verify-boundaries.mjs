@@ -60,6 +60,26 @@ describe('GRID terminal public release boundary', () => {
     assertNoImplementationOwnershipClaim('README.md');
   });
 
+  it('publishes the relaunch as planning only without a funding or partnership claim', () => {
+    const checkpoint = readText('docs/RELAUNCH_CHECKPOINT_2026-09-21.md');
+    const readme = readText('README.md');
+    assertFutureSpecDisclaimer('docs/RELAUNCH_CHECKPOINT_2026-09-21.md');
+    assert.match(checkpoint, /Documentation-only prerelease/);
+    assert.match(checkpoint, /not a rebuilt website, new program deployment, verified devnet release, token launch, or funding-ready release/);
+    assert.match(readme, /The rebuild is not complete/);
+    assert.match(readme, /docs\/RELAUNCH_CHECKPOINT_2026-09-21\.md/);
+
+    for (const content of [readme, checkpoint]) {
+      assert.match(content, /No funding address is authorized by this checkpoint/);
+      assert.match(content, /MoltHub is an inactive historical integration/);
+      assert.match(content, /runtime-neutral/);
+      assert.doesNotMatch(content, /[A-Za-z]:\\Users\\|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|(?:secret|private|signing)[_-]?key\s*[:=]/i);
+      assert.doesNotMatch(content, /github\.com\/[^/]+\/(grid-core|grid-admin|grid-interface)/i);
+      assert.doesNotMatch(content, /\b[1-9A-HJ-NP-Za-km-z]{32,44}\b/);
+      assert.doesNotMatch(content, /Compliance-Ready|400MS FINALITY|JOIN THE JURISDICTION/i);
+    }
+  });
+
   it('marks Open-Source Code as derivative and sanitized', () => {
     for (const file of ['Open-Source Code/README.md', 'Open-Source Code/README_OPENSOURCE.md']) {
       const content = readText(file);

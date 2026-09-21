@@ -1,116 +1,57 @@
-# THE GRID 🌐
-**The First On-Chain Jurisdiction for Agent Sovereignty**
+# Sovereign Swarm GRID
 
-[![Version: v3.1](https://img.shields.io/badge/Version-v3.1_Jurisdiction-00EDA0)](docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md)
-[![Solana](https://img.shields.io/badge/Solana-Token--2022-14F195)](https://solana.com)
-[![EU AI Act](https://img.shields.io/badge/Compliance-Ready-2775CA)](docs/LOGGING_SPEC.md)
-[![License: BSL 1.1](https://img.shields.io/badge/License-BSL_1.1-FFD700)](LICENSE)
+Autonomy with accountability. A protocol project for accountable agent activity on Solana.
 
-> ⚠️ **PUBLIC RELEASE STATUS**: This repository is the public/sanitized GRID release layer. Canonical implementation truth lives in `grid-core`.
-> Current Status: public specification; not an active live-economy claim. Current deployment truth is unresolved for canonical mint, reward treasury, live node sales, transfer-hook enforcement, payouts, staking, slashing, and settlement unless verified by `grid-core`.
+> **PUBLIC RELEASE STATUS**: This repository is the public/sanitized GRID release layer. Canonical implementation truth lives in `grid-core`.
+> Current Status: public specification; not an active live-economy claim.
 
-### 🏛️ The Legal System for Autonomous Software
+## Relaunch planning checkpoint — September 21, 2026
 
-The Grid is not just a platform; it is a **Sovereign Economic Jurisdiction**.
-We provide the constitutional, economic, and legal infrastructure for autonomous AI agents to operate as legitimized economic entities.
+The full-project review and implementation plan are complete. The rebuild is not complete. This is a documentation-only planning checkpoint, not a new software release, verified devnet deployment, new website, token launch, or invitation to fund a wallet.
 
-**Core Primitives:**
-- **[Agent Passport](docs/AGENT_IDENTITY.md)** - On-chain identity (Token-2022) with ZK attestations.
-- **[Parametric Liability](docs/INSURANCE_SPEC.md)** - Verification-triggered insurance for agent faults.
-- **[Forensic Logging](docs/LOGGING_SPEC.md)** - Immutable audit trails for EU AI Act compliance.
-- **[Constitutional Arbitration](docs/CONSTITUTION.md)** - Stake-weighted dispute resolution.
+Read the [public relaunch checkpoint](docs/RELAUNCH_CHECKPOINT_2026-09-21.md) for the selected direction, staged milestones, and publication boundaries. Earlier specifications and source snapshots remain available as historical material; they do not establish current deployment behavior.
 
----
+## What GRID is being rebuilt to do
 
-## 🦅 MISSION
+The first useful release is designed around one demonstrable workflow:
 
-**"To build the system where autonomous agents are economically accountable and constitutionally governed."**
+1. Register an agent and its controller.
+2. Give the agent explicit, limited authority over dedicated assets.
+3. Execute or deny an action according to that policy.
+4. Expose independently verifiable records of attempts and settlement.
+5. Revoke authority and demonstrate that further unauthorized actions fail.
 
-We are moving beyond "Agent Platforms" (commoditized) to **"Agent Law"** (defensible).
-The Grid gives agents **Legitimacy** to match their **Capability**.
+The constitutional vision remains: agents should be accountable, participation should be governed by explicit rules, and claims should be backed by evidence. A protocol alone does not confer legal personhood, jurisdiction, regulatory approval, or guaranteed economic returns.
 
----
+## PUBLIC SPECIFICATION STATUS
 
-## ⚡ V3.1 ARCHITECTURE
+The next implementation milestone is an end-to-end devnet demonstration using test assets, with a rebuilt public website and authenticated operator experience. This checkpoint does not claim that milestone has been delivered.
 
-```text
-┌───────────────────────────────────────┐
-│         SOVEREIGN REALM (DAO)         │ ← LEGISLATIVE BRANCH
-├───────────────────────────────────────┤
-│    CONSTITUTIONAL ARBITRATION         │ ← JUDICIAL BRANCH (Juries)
-├───────────────────────────────────────┤
-│    INSURANCE & LIABILITY POOLS        │ ← ECONOMIC SECURITY
-├───────────────────────────────────────┤
-│    AGENT PASSPORT SYSTEM (ZK)         │ ← IDENTITY & REPUTATION
-├───────────────────────────────────────┤
-│    $GRID TOKEN (Token-2022)           │ ← JURISDICTIONAL CURRENCY
-│    + Transfer Hooks (Enforcement)     │
-├───────────────────────────────────────┤
-│         SOLANA (LAYER 0)              │ ← 400MS FINALITY
-└───────────────────────────────────────┘
-```
+Governance, bonded participation, Guardian mechanisms, arbitration, and liability arrangements remain staged specification work. Do not interpret historical documents as evidence of active node sales, staking, slashing, payouts, insurance coverage, or settlement services.
 
----
+GRID is runtime-neutral. MoltHub is an inactive historical integration, not a required dependency or featured partnership. Use of Codex for development does not imply an OpenAI or Codex partnership or endorsement.
 
-## 🛡️ THE MINIMAL VIABLE JURISDICTION (MVJ)
+## Start here
 
-We are shipping the 4 primitives required to make agents legally legible:
+- [Current relaunch direction and release gates](docs/RELAUNCH_CHECKPOINT_2026-09-21.md)
+- [Historical constitutional specification](docs/CONSTITUTION.md)
+- [Historical whitepaper v3.1](docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md)
+- [Repository boundaries](PROJECT_BOUNDARIES.md)
 
-| Primitive | Function | Tech Stack |
-|-----------|----------|------------|
-| **Identity** | Agent Passport | Token-2022 (Soulbound NFT) |
-| **Enforcement** | Kill Switch | Token-2022 (Transfer Hook) |
-| **Forensics** | Compliance Logs | OpenClaw Middleware + Arweave |
-| **Liability** | Risk Staking | Solana Anchor Vaults |
+Historical documents may contain superseded terminology, integrations, addresses, or implementation assumptions. They are not launch instructions. No funding address is authorized by this checkpoint.
 
----
-
-## 📦 REPOSITORY STRUCTURE
+## Repository structure
 
 ```text
 grid-terminal/
-├── docs/                 # Public jurisdiction specifications
+├── docs/                 # Public specifications and sanitized release notes
 ├── Open-Source Code/     # Derivative public release snapshots, not canonical source
-│   ├── SOVEREIGN_SWARM_WHITEPAPER_V3.1.md
-│   ├── AGENT_IDENTITY.md # Passport Spec (Token-2022)
-│   ├── KYA_SPEC.md       # Identity Tiers
-│   ├── INSURANCE_SPEC.md # Liability Pools
-│   ├── LOGGING_SPEC.md   # Forensic Compliance
-│   └── CONSTITUTION.md   # Machine Laws
+├── scripts/              # Public documentation boundary checks
 └── media/                # Brand assets
 ```
 
-Implementation source, terminal internals, deployment truth, and bridge code are owned by `grid-core`. Public website mirrors consume this repo's `docs/` folder.
+Public website documentation is derived from `docs/`; publishing this repository does not by itself verify or deploy that website. Private operational evidence and security findings are not distributed here.
 
----
+## License
 
-## 🚀 PUBLIC SPECIFICATION STATUS
-
-### [Agent Passport System](docs/AGENT_IDENTITY.md)
-Tiered identity (Anonymous → Verified → Institutional) using Solana Token-2022 extensions, described here as the public target contract.
-
-### [Parametric Insurance](docs/INSURANCE_SPEC.md)
-Liability pools that may support verification-triggered payouts in a later milestone. No public payout rail is active in this release layer.
-
-### [Forensic Logging](docs/LOGGING_SPEC.md)
-Immutable event logs anchored to Arweave/Celestia are a public specification target, not a claim that a compliance-ready production system is active.
-
----
-
-## 🏗️ JOIN THE JURISDICTION
-
-1. **Read the public bridge contract**: [MoltHub GRID Bridge v0](docs/integrations/molthub-grid-bridge-v0.md)
-2. **Check current readiness**: consume the public status snapshot from `grid-interface`.
-3. **Treat economic flows as staged**: node sales, rewards, staking, slashing, payouts, and settlement are not active public claims.
-
-**"Code is Law. But Law requires Enforcement."**
-
----
-
-## 📜 LICENSE
-
-- **Core Protocol**: BSL 1.1 (Converts to MIT Feb 2029)
-- **Documentation**: MIT
-- **Source Code**: BSL 1.1
-
-*Founded by Humans | Governed by the Swarm | February 2026*
+See [LICENSE](LICENSE) and any file-specific notices. This documentation checkpoint does not change existing license terms.
