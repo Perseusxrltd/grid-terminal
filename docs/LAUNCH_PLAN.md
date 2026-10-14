@@ -1,3 +1,14 @@
+---
+id: launch-plan
+title: GRID launch plan
+release: R0
+status: specified
+canonicalSource: docs/LAUNCH_PLAN.md
+updatedAt: 2026-10-14
+implementationRefs: []
+limitations: Sanitized public summary of the execution plan. Not a schedule, not an offer, and not a funding instruction.
+---
+
 # GRID launch plan (public)
 
 Last updated October 14, 2026. Public, sanitized summary of the execution plan that follows the [September 21 relaunch checkpoint](RELAUNCH_CHECKPOINT_2026-09-21.md).

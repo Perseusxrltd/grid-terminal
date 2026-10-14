@@ -193,4 +193,115 @@ describe('GRID terminal public release boundary', () => {
       assert.doesNotMatch(text, /^> \*\*Superseded \(2026-10-14\)\.\*\*/);
     }
   });
+
+  it('publishes the R0 philosophy with frontmatter, the law table, and no forbidden active claim', () => {
+    const activeDocs = [];
+    const walkDocs = (directory) => {
+      for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+        const fullPath = path.join(directory, entry.name);
+        const relative = path.relative(root, fullPath).split(path.sep).join('/');
+        if (entry.isDirectory()) {
+          if (relative === 'docs/archive') continue;
+          walkDocs(fullPath);
+        } else if (entry.isFile() && entry.name.endsWith('.md')) {
+          activeDocs.push(relative);
+        }
+      }
+    };
+    walkDocs(path.join(root, 'docs'));
+
+    const required = [
+      'docs/README.md',
+      'docs/protocol/overview.md',
+      'docs/protocol/constitution.md',
+    ];
+    for (const file of required) {
+      assert.ok(activeDocs.includes(file), `${file} must be an active document`);
+    }
+
+    const frontmatterKeys = [
+      'id',
+      'title',
+      'release',
+      'status',
+      'canonicalSource',
+      'updatedAt',
+      'implementationRefs',
+      'limitations',
+    ];
+    for (const file of activeDocs) {
+      const text = readText(file);
+      const match = text.match(/^---\n([\s\S]*?)\n---\n/);
+      assert.ok(match, `${file} must start with frontmatter`);
+      for (const key of frontmatterKeys) {
+        assert.match(match[1], new RegExp(`^${key}:`, 'm'), `${file} frontmatter lacks ${key}`);
+      }
+      assert.match(match[1], /^release: R0$/m, file);
+      assert.match(match[1], /^status: specified$/m, file);
+      assert.match(match[1], /^updatedAt: \d{4}-\d{2}-\d{2}$/m, file);
+      assert.match(text, /Current Status: public specification; not an active live-economy claim\./);
+    }
+
+    const overview = readText('docs/protocol/overview.md');
+    const constitution = readText('docs/protocol/constitution.md');
+    assert.match(
+      overview,
+      /Sovereign Swarm is building accountable autonomy on Solana: registered agents, explicit spending policies, and verifiable records of execution\./,
+    );
+    assert.match(
+      overview,
+      /An economic jurisdiction is an opt-in set of protocol rules for registered agents and the assets placed under those rules\. It does not replace public law or confer legal personhood\./,
+    );
+    assert.match(overview, /not the inventor of agent identity, spending limits, or HTTP agent payments/);
+    assert.match(overview, /not a permanent reduction of the project to a wallet demo/);
+    for (const release of ['R0', 'R1', 'R2', 'R3', 'R4', 'R5', 'R6', 'R7']) {
+      assert.match(overview, new RegExp(`\\| ${release}:`));
+    }
+
+    assert.match(constitution, /Law versus program guarantee/);
+    for (const law of [
+      'Constitutional Supremacy',
+      'Economic Solvency',
+      'Verifiable Integrity',
+      'Constitutional Alignment',
+      'Mission Pursuit',
+    ]) {
+      assert.match(constitution, new RegExp(law));
+    }
+    assert.match(constitution, /A capped vault is not proof of solvency/);
+    assert.match(constitution, /A hash proves integrity of the presented bytes/);
+    assert.match(constitution, /Prompt wording cannot enforce activity in an external wallet/);
+    assert.match(constitution, /There is no promise of GRID appreciation, yield, income, or treasury redemption/);
+    assert.match(constitution, /A name does not imply a privileged key/);
+
+    const forbidden = [
+      { label: '4.38', pattern: /4\.38/ },
+      { label: '400ms finality', pattern: /400\s*ms finality/i },
+      {
+        label: 'legal personhood',
+        pattern: /legal personhood/i,
+        allowLine: /\b(does not|do not|not confer|cannot confer)\b/i,
+      },
+      { label: 'unlimited volume', pattern: /unlimited volume/i },
+      { label: 'guaranteed', pattern: /\bguaranteed\b/i },
+      { label: 'fee exempt', pattern: /\bfee exempt\b/i },
+      { label: '50% genesis', pattern: /50%\s*genesis/i },
+      { label: 'no insider advantages', pattern: /no insider advantages/i },
+      { label: 'KYA replaces KYC', pattern: /KYA replaces KYC/i },
+      { label: 'AI Act compliant', pattern: /AI Act compliant/i },
+    ];
+
+    const violations = [];
+    for (const file of activeDocs) {
+      const lines = readText(file).split('\n');
+      lines.forEach((line, index) => {
+        for (const rule of forbidden) {
+          if (!rule.pattern.test(line)) continue;
+          if (rule.allowLine && rule.allowLine.test(line)) continue;
+          violations.push(`${file}:${index + 1} ${rule.label}`);
+        }
+      });
+    }
+    assert.deepEqual(violations, []);
+  });
 });

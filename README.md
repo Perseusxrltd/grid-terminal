@@ -25,7 +25,7 @@ The first useful release is designed around one demonstrable workflow:
 4. Expose independently verifiable records of attempts and settlement.
 5. Revoke authority and demonstrate that further unauthorized actions fail.
 
-The constitutional vision remains: agents should be accountable, participation should be governed by explicit rules, and claims should be backed by evidence. A protocol alone does not confer legal personhood, jurisdiction, regulatory approval, or guaranteed economic returns.
+The constitutional vision remains: agents should be accountable, participation should be governed by explicit rules, and claims should be backed by evidence. A protocol alone does not confer legal personhood, jurisdiction, regulatory approval, or promised economic returns.
 
 ## PUBLIC SPECIFICATION STATUS
 
@@ -37,6 +37,7 @@ GRID is runtime-neutral. MoltHub is an inactive historical integration, not a re
 
 ## Start here
 
+- [Documentation index](docs/README.md)
 - [Public launch plan and release stages](docs/LAUNCH_PLAN.md)
 - [Current relaunch direction and release gates](docs/RELAUNCH_CHECKPOINT_2026-09-21.md)
 - [Historical constitutional specification](docs/archive/v3.1/CONSTITUTION.md)

@@ -1,3 +1,14 @@
+---
+id: relaunch-checkpoint-2026-09-21
+title: GRID relaunch planning checkpoint
+release: R0
+status: specified
+canonicalSource: docs/RELAUNCH_CHECKPOINT_2026-09-21.md
+updatedAt: 2026-09-21
+implementationRefs: []
+limitations: Documentation-only planning note from September 21, 2026. Not a deployment, a token launch, or a funding instruction.
+---
+
 # GRID relaunch: public planning checkpoint
 
 Published September 21, 2026. Documentation-only prerelease.
