@@ -1,31 +1,11 @@
 # Open Source Release Notes
 
-This folder is a public/sanitized derivative release snapshot. It is not the canonical implementation source; verify current behavior in `grid-core` before treating any code or deployment value as authoritative.
+This folder is a public/sanitized derivative placeholder. It is not the canonical implementation source; verify current behavior in `grid-core` before treating any code or deployment value as authoritative.
 
-## 🔒 Security Status
+## Current status
 
-- **Identity System**: Patched. Requires `initialize` instruction to set DAO authority.
-- **Policy Guard**: Patched. Requires `update_treasury_stats` to set initial limits.
-- **Token Hook**: Audit passed. Tax logic present but requires configuration.
+No code is published here. The derivative snapshots of retired prototype code that this folder previously held were removed on 2026-10-14 because they do not reflect the relaunch. Repository history keeps them for provenance only, and they must not be deployed.
 
-## ⚠️ Required Actions Before Deployment
+## Next release
 
-1. **Generate New Keys**:
-   The `Anchor.toml` and `declare_id!` macros currently use the standard Anchor test key:
-   `Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS`
-
-   **YOU MUST**:
-   - Run `solana-keygen new -o id.json`
-   - Run `anchor keys sync` to update all program IDs.
-   - Commit the new IDs.
-
-2. **Configure Ops Wallet**:
-   In `systems/token/programs/grid-transfer-hook/src/lib.rs`, update the `OPS_WALLET` constant to your actual operations wallet address.
-
-3. **Build & Test**:
-   - `cd systems/identity/programs && anchor build`
-   - `cd systems/governance/programs && anchor build`
-   - `cd systems/token/programs && anchor build`
-
-## 📄 License
-Ensure you have set the correct license in `LICENSE` file.
+The next public code release will be an allowlisted, hash-verified export of the reviewed v1 programs and SDK. Release notes for that export will replace this file when it is published.

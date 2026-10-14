@@ -3,7 +3,7 @@ title: "GRID Public Release Layer"
 version: "v3.1-devnet"
 category: "Other"
 status: "prototype"
-summary: "Public/sanitized Sovereign Swarm GRID release layer for specs, media, docs, derivative code snapshots, and proof-oriented collaboration."
+summary: "Public/sanitized Sovereign Swarm GRID release layer for specs, media, docs, future allowlisted code exports, and proof-oriented collaboration."
 source_url: "https://github.com/Perseusxrltd/grid-terminal"
 docs_url: "https://github.com/Perseusxrltd/grid-terminal/tree/main/docs"
 issues_url: "https://github.com/Perseusxrltd/grid-terminal/issues"
@@ -19,4 +19,4 @@ GRID is the Sovereign Swarm devnet protocol surface for autonomous-agent identit
 
 Current MoltHub-facing focus: keep the public operating page honest while `grid-core` remains the canonical implementation/source repo for wallet verification, Agent Identity reads, trust-profile normalization, and fail-closed deployment-status checks.
 
-This repo is the public/sanitized release layer. `Open-Source Code/` contains derivative snapshots and must not be treated as canonical source. Deployment IDs, treasury wallets, and mint status must be verified against `grid-core` before being presented as canonical.
+This repo is the public/sanitized release layer. `Open-Source Code/` is a placeholder for future allowlisted code exports (earlier snapshots were removed on 2026-10-14) and must not be treated as canonical source. Deployment IDs, treasury wallets, and mint status must be verified against `grid-core` before being presented as canonical.

@@ -8,7 +8,7 @@ Use it for public specs and sanitized release content, not as the unquestioned s
 This is the locked GRID / Sovereign Swarm repo model. Do not invert these roles.
 
 - `grid-core` = canonical implementation/source repo for protocol code, terminal code, bridge code, deployment truth, SDKs, and private operational material.
-- `grid-terminal` = public/sanitized release layer for docs, media, public specs, and derivative `Open-Source Code/` snapshots. It is not the canonical implementation source.
+- `grid-terminal` = public/sanitized release layer for docs, media, public specs, and a placeholder `Open-Source Code/` folder for future allowlisted public code exports. It is not the canonical implementation source.
 - `grid-interface` = public website consuming `grid-terminal/docs` plus public-safe status snapshots and MoltHub collaboration links.
 - `grid-admin` = internal/operator console for admin-only workflows and monitoring.
 
@@ -32,7 +32,7 @@ When a task spans repos, verify implementation behavior in `grid-core` first, pu
 ## Source Of Truth
 
 - Public docs are authored in `docs/` here; downstream website doc folders are copied render targets.
-- `Open-Source Code/` is a sanitized public derivative and must not be assumed to match `grid-core` exactly or to be the implementation source of truth.
+- `Open-Source Code/` is a placeholder for future allowlisted public code exports (earlier snapshots were removed on 2026-10-14); it must not be assumed to match `grid-core` or to be the implementation source of truth.
 - Program IDs, mint addresses, treasury wallets, and network settings must be verified against current implementation and deployment config before publication.
 - README values and roadmap text are advisory narrative, not runtime configuration.
 - When website docs need updates, edit here first and let downstream sync scripts copy the content.
@@ -54,4 +54,4 @@ When a task spans repos, verify implementation behavior in `grid-core` first, pu
 - `grid-terminal` and `grid-core` are only partially mirrored and are not a strict 1:1 pair.
 - Mint/program IDs differ across repos and docs; verify instead of copying by sight.
 - `grid-interface` syncs docs from this repo via a sibling-repo path, while `grid-admin` still points at a legacy docs path.
-- Some files in `Open-Source Code/` match `grid-core`, while others have diverged; always compare before assuming parity.
+- `Open-Source Code/` holds no code until the reviewed v1 export is published; compare against `grid-core` before assuming parity with anything exported later.

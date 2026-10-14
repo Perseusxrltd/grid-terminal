@@ -47,7 +47,7 @@ describe('GRID terminal public release boundary', () => {
     const metadata = readText('.molthub/project.md');
     assert.match(metadata, /title: "GRID Public Release Layer"/);
     assert.match(metadata, /public\/sanitized release layer/i);
-    assert.match(metadata, /Open-Source Code\/` contains derivative snapshots/i);
+    assert.match(metadata, /Open-Source Code\/` is a placeholder for future allowlisted code exports/i);
     assert.match(metadata, /verified against `grid-core`/i);
     assertNoImplementationOwnershipClaim('.molthub/project.md');
   });
@@ -56,7 +56,7 @@ describe('GRID terminal public release boundary', () => {
     const readme = readText('README.md');
     assert.match(readme, /public\/sanitized GRID release layer/i);
     assert.match(readme, /Canonical implementation truth lives in `grid-core`/);
-    assert.match(readme, /Open-Source Code\/\s+# Derivative public release snapshots, not canonical source/i);
+    assert.match(readme, /Open-Source Code\/\s+# Placeholder for future allowlisted code exports; not canonical source/i);
     assertNoImplementationOwnershipClaim('README.md');
   });
 
@@ -94,13 +94,52 @@ describe('GRID terminal public release boundary', () => {
     assert.match(readText('README.md'), /docs\/LAUNCH_PLAN\.md/);
   });
 
-  it('marks Open-Source Code as derivative and sanitized', () => {
+  it('marks Open-Source Code as a derivative and sanitized placeholder', () => {
     for (const file of ['Open-Source Code/README.md', 'Open-Source Code/README_OPENSOURCE.md']) {
       const content = readText(file);
       assert.match(content, /public\/sanitized derivative/i);
       assert.match(content, /not the canonical implementation source/i);
       assert.match(content, /grid-core/i);
     }
+  });
+
+  it('keeps retired prototype code, deployment scripts and dependencies out of the repository', () => {
+    for (const retired of ['Open-Source Code/systems', 'Open-Source Code/terminal']) {
+      assert.equal(fs.existsSync(path.join(root, retired)), false, `${retired} must not exist`);
+    }
+
+    assert.deepEqual(fs.readdirSync(path.join(root, 'scripts')), ['verify-boundaries.mjs']);
+
+    const manifest = JSON.parse(readText('package.json'));
+    assert.equal(manifest.dependencies, undefined, 'package.json must not declare dependencies');
+    assert.equal(manifest.devDependencies, undefined, 'package.json must not declare devDependencies');
+
+    const retiredTerms = [
+      ['Stea', 'lth Whale'].join(''),
+      ['obfuscate', 'whale'].join(' '),
+      ['Grid', 'Private'].join('-'),
+      ['deployer', 'pk'].join('_'),
+    ].map((term) => term.toLowerCase());
+
+    const offenders = [];
+    const walk = (directory) => {
+      for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+        if (entry.name === '.git' || entry.name === 'node_modules') continue;
+        const fullPath = path.join(directory, entry.name);
+        if (entry.isDirectory()) {
+          walk(fullPath);
+        } else if (entry.isFile()) {
+          const buffer = fs.readFileSync(fullPath);
+          if (buffer.includes(0)) continue;
+          const text = buffer.toString('utf8').toLowerCase();
+          if (retiredTerms.some((term) => text.includes(term))) {
+            offenders.push(path.relative(root, fullPath));
+          }
+        }
+      }
+    };
+    walk(root);
+    assert.deepEqual(offenders, [], 'retired prototype terms found in tracked text files');
   });
 
   it('keeps the public MoltHub bridge doc pointed at grid-core implementation ownership', () => {

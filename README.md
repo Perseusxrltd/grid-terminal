@@ -13,7 +13,7 @@ The execution plan is fixed and published in sanitized form: [public launch plan
 
 The full-project review and implementation plan are complete. The rebuild is not complete. This is a documentation-only planning checkpoint, not a new software release, verified devnet deployment, new website, token launch, or invitation to fund a wallet.
 
-Read the [public relaunch checkpoint](docs/RELAUNCH_CHECKPOINT_2026-09-21.md) for the selected direction, staged milestones, and publication boundaries. Earlier specifications and source snapshots remain available as historical material; they do not establish current deployment behavior.
+Read the [public relaunch checkpoint](docs/RELAUNCH_CHECKPOINT_2026-09-21.md) for the selected direction, staged milestones, and publication boundaries. Earlier specifications remain available as historical material, and earlier source snapshots were removed on 2026-10-14; neither establishes current deployment behavior.
 
 ## What GRID is being rebuilt to do
 
@@ -50,7 +50,7 @@ Historical documents may contain superseded terminology, integrations, addresses
 ```text
 grid-terminal/
 ├── docs/                 # Public specifications and sanitized release notes
-├── Open-Source Code/     # Derivative public release snapshots, not canonical source
+├── Open-Source Code/     # Placeholder for future allowlisted code exports; not canonical source
 ├── scripts/              # Public documentation boundary checks
 └── media/                # Brand assets
 ```
