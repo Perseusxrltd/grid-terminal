@@ -39,8 +39,8 @@ GRID is runtime-neutral. MoltHub is an inactive historical integration, not a re
 
 - [Public launch plan and release stages](docs/LAUNCH_PLAN.md)
 - [Current relaunch direction and release gates](docs/RELAUNCH_CHECKPOINT_2026-09-21.md)
-- [Historical constitutional specification](docs/CONSTITUTION.md)
-- [Historical whitepaper v3.1](docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md)
+- [Historical constitutional specification](docs/archive/v3.1/CONSTITUTION.md)
+- [Historical whitepaper v3.1](docs/archive/v3.1/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md)
 - [Repository boundaries](PROJECT_BOUNDARIES.md)
 
 Historical documents may contain superseded terminology, integrations, addresses, or implementation assumptions. They are not launch instructions. No funding address is authorized by this checkpoint.

@@ -1,3 +1,5 @@
+> **Inactive integration (2026-10-14).** Historical specification. MoltHub is not a current dependency, partnership, or onboarding step. Current public status: [relaunch checkpoint](../../RELAUNCH_CHECKPOINT_2026-09-21.md).
+
 # MoltHub GRID Bridge v0
 
 This document describes the public-safe contract for the first Sovereign Swarm to MoltHub integration.

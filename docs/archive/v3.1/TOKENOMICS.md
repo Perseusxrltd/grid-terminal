@@ -1,3 +1,5 @@
+> **Superseded (2026-10-14).** Archived v3.1 public specification. Not a current claim, not a live system, and not a funding instruction. Current public status: [relaunch checkpoint](../../RELAUNCH_CHECKPOINT_2026-09-21.md) and [launch plan](../../LAUNCH_PLAN.md).
+
 # Tokenomics v3.1 - Fair Launch & Risk Collateral
 
 > 🚀 **FAIR LAUNCH**: No presale, no private investors, no insider advantages.

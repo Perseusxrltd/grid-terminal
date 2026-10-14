@@ -12,5 +12,5 @@ When a task spans repos, verify implementation behavior in `grid-core` first, pu
 Concrete evidence as of 2026-05-03:
 
 - `grid-core/systems/molthub-bridge/` contains the real MoltHub bridge implementation.
-- `grid-terminal/docs/integrations/molthub-grid-bridge-v0.md` is the public bridge contract.
+- `grid-terminal/docs/archive/integrations/molthub-grid-bridge-v0.md` is the archived public bridge contract. It is an inactive historical integration, not a current dependency.
 - `grid-terminal/Open-Source Code/` is a placeholder for future allowlisted public code exports, not canonical source; earlier derivative snapshots were removed on 2026-10-14.

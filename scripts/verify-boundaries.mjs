@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { describe, it } from 'node:test';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -40,7 +41,7 @@ describe('GRID terminal public release boundary', () => {
     assert.match(boundaries, /grid-terminal` = public\/sanitized release layer/);
     assert.match(boundaries, /not the canonical implementation source/);
     assert.match(boundaries, /grid-core\/systems\/molthub-bridge\//);
-    assert.match(boundaries, /grid-terminal\/docs\/integrations\/molthub-grid-bridge-v0\.md/);
+    assert.match(boundaries, /grid-terminal\/docs\/archive\/integrations\/molthub-grid-bridge-v0\.md/);
   });
 
   it('describes MoltHub metadata as a public release layer', () => {
@@ -127,6 +128,7 @@ describe('GRID terminal public release boundary', () => {
         if (entry.name === '.git' || entry.name === 'node_modules') continue;
         const fullPath = path.join(directory, entry.name);
         if (entry.isDirectory()) {
+          if (path.relative(root, fullPath).split(path.sep).join('/') === 'docs/archive') continue;
           walk(fullPath);
         } else if (entry.isFile()) {
           const buffer = fs.readFileSync(fullPath);
@@ -142,31 +144,53 @@ describe('GRID terminal public release boundary', () => {
     assert.deepEqual(offenders, [], 'retired prototype terms found in tracked text files');
   });
 
-  it('keeps the public MoltHub bridge doc pointed at grid-core implementation ownership', () => {
-    const bridge = readText('docs/integrations/molthub-grid-bridge-v0.md');
+  it('keeps the archived MoltHub bridge doc pointed at grid-core implementation ownership', () => {
+    const bridge = readText('docs/archive/integrations/molthub-grid-bridge-v0.md');
+    assert.match(bridge, /Inactive integration \(2026-10-14\)/);
     assert.match(bridge, /implementation lives in private `grid-core` under `systems\/molthub-bridge\/`/i);
     assert.match(bridge, /public document intentionally avoids private deployment internals/i);
     assert.match(bridge, /MoltHub should remain the work coordination, evidence, mission, review, and receipt layer/i);
   });
 
-  it('labels public live-economy docs as future/spec, not active deployment truth', () => {
+  it('labels archived live-economy docs as future/spec, not active deployment truth', () => {
     for (const file of [
       'README.md',
-      'docs/node_sale.md',
-      'docs/guardian_nodes.md',
-      'docs/INSURANCE_SPEC.md',
-      'docs/IDENTITY_ENFORCEMENT.md',
-      'docs/KYA_SPEC.md',
+      'docs/archive/v3.1/node_sale.md',
+      'docs/archive/v3.1/guardian_nodes.md',
+      'docs/archive/v3.1/INSURANCE_SPEC.md',
+      'docs/archive/v3.1/IDENTITY_ENFORCEMENT.md',
+      'docs/archive/v3.1/KYA_SPEC.md',
     ]) {
       assertFutureSpecDisclaimer(file);
     }
 
-    const nodeSale = readText('docs/node_sale.md');
+    const nodeSale = readText('docs/archive/v3.1/node_sale.md');
     assert.doesNotMatch(nodeSale, /\|\s*\*\*Tier 1 \(Early Supporter\)\*\*\s*\|[^\n]*\|\s*\*\*ACTIVE\*\*\s*\|/i);
     assert.match(nodeSale, /not active/i);
 
     const readme = readText('README.md');
     assert.doesNotMatch(readme, /COMPLIANCE-READY INFRASTRUCTURE/i);
     assert.match(readme, /PUBLIC SPECIFICATION STATUS/i);
+  });
+
+  it('archives v3.1 docs with original bytes recoverable from the manifest', () => {
+    const manifest = JSON.parse(readText('docs/archive/manifest.json'));
+    assert.equal(manifest.schema_version, 'grid.archive-manifest.v1');
+    const originals = manifest.entries.map((entry) => entry.original_path);
+    assert.deepEqual(originals, [...originals].sort());
+
+    for (const entry of manifest.entries) {
+      assert.equal(fs.existsSync(path.join(root, entry.original_path)), false, entry.original_path);
+      const archived = fs.readFileSync(path.join(root, entry.archive_path));
+      const body = entry.archive_path.endsWith('.json')
+        ? archived
+        : Buffer.from(archived.toString('utf8').split('\n').slice(2).join('\n'));
+      assert.equal(createHash('sha256').update(body).digest('hex'), entry.sha256, entry.archive_path);
+    }
+
+    for (const kept of ['docs/RELAUNCH_CHECKPOINT_2026-09-21.md', 'docs/LAUNCH_PLAN.md']) {
+      const text = readText(kept);
+      assert.doesNotMatch(text, /^> \*\*Superseded \(2026-10-14\)\.\*\*/);
+    }
   });
 });

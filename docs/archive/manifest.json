@@ -1,0 +1,125 @@
+{
+  "schema_version": "grid.archive-manifest.v1",
+  "archived_at": "2026-10-14",
+  "entries": [
+    {
+      "original_path": "docs/AGENT_IDENTITY.md",
+      "archive_path": "docs/archive/v3.1/AGENT_IDENTITY.md",
+      "sha256": "118fe7beda93e4b724654fc1fe0c206f365c9ffd7cd9226763eb610fa6f39073",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/CONSTITUTION.md",
+      "archive_path": "docs/archive/v3.1/CONSTITUTION.md",
+      "sha256": "2b6d1d7aa835c6018b593ea5693d09e4722296e776b8aede11ae46be132c8d31",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/IDENTITY_ENFORCEMENT.md",
+      "archive_path": "docs/archive/v3.1/IDENTITY_ENFORCEMENT.md",
+      "sha256": "5ab1d410ddde3564d0316e9f8e57a823b29e57dfda901c0c5117c574cdc5e224",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/INDUSTRIAL_WORKFLOW.md",
+      "archive_path": "docs/archive/v3.1/INDUSTRIAL_WORKFLOW.md",
+      "sha256": "8796b2fe082398f51f10bacf791601a7a19ad1a106961e7c1a8444090c975e88",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/INSURANCE_SPEC.md",
+      "archive_path": "docs/archive/v3.1/INSURANCE_SPEC.md",
+      "sha256": "fe350f5f111edd587bf22945d6fa4ef543c114f11617ef6c6fce129619a8d487",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/KNOWLEDGE_CORE.md",
+      "archive_path": "docs/archive/v3.1/KNOWLEDGE_CORE.md",
+      "sha256": "1a5ec7b79193fb467d858ad8e375f9859af3098e8ab7f942b8d002610bb79b74",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/KYA_SPEC.md",
+      "archive_path": "docs/archive/v3.1/KYA_SPEC.md",
+      "sha256": "f70a8cc5a2f4ca440e7b96371b13a8825ae42eed6a482135ba6ed827827e286c",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/LOGGING_SPEC.md",
+      "archive_path": "docs/archive/v3.1/LOGGING_SPEC.md",
+      "sha256": "5ae86346722581c9ae1a24746cf4f3ca7811471a31093c9d3dc7b581c5d55653",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md",
+      "archive_path": "docs/archive/v3.1/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md",
+      "sha256": "e0820f9e60dcbde79fd36c68e71ed8eb0221c2a578565d17db611406692a64c2",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/TOKENOMICS.md",
+      "archive_path": "docs/archive/v3.1/TOKENOMICS.md",
+      "sha256": "3779b21f099fc0b9b48d6d500bba584d7ce7f972814dc7a2c3b5b4a2276b33b3",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/VEGRID_SPEC.md",
+      "archive_path": "docs/archive/v3.1/VEGRID_SPEC.md",
+      "sha256": "5c575859995dd16fbce9a046be8bfa01ca1b4dcbdba2f28613270055709aa7be",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/guardian_nodes.md",
+      "archive_path": "docs/archive/v3.1/guardian_nodes.md",
+      "sha256": "97b36e4614b7c500d00ffff9b5c877c30d240e7ea588df5627721fb8b8744cd2",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/integrations/molthub-grid-bridge-v0.md",
+      "archive_path": "docs/archive/integrations/molthub-grid-bridge-v0.md",
+      "sha256": "f4884469e2669b2582d090ac9186dc6391ea0db44bb4fa6c74be07f7724475ae",
+      "reason": "inactive historical integration",
+      "superseded_by": "docs/RELAUNCH_CHECKPOINT_2026-09-21.md"
+    },
+    {
+      "original_path": "docs/legal_terms.md",
+      "archive_path": "docs/archive/v3.1/legal_terms.md",
+      "sha256": "cfa1709dd5e7aa8eaf5a08491803cee746df90f5a78a7433623a88c9d855228e",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/metadata.json",
+      "archive_path": "docs/archive/v3.1/metadata.json",
+      "sha256": "116c5bf1163abddf03217a000523d4f3127a136828ce0a2e8eaf6c8de6fb9a9c",
+      "reason": "v3.1 docs index moved with the archived specification; body unchanged",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/node_sale.md",
+      "archive_path": "docs/archive/v3.1/node_sale.md",
+      "sha256": "6db9dc549542d28c766e8646b328a09f6d0052553bdb6ff5917fdb10d1651f24",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    },
+    {
+      "original_path": "docs/x402_PROTOCOL.md",
+      "archive_path": "docs/archive/v3.1/x402_PROTOCOL.md",
+      "sha256": "25b46a32994297ebdbe7d8cd6199cdda6d25295657c1a8612558e919fd5b861a",
+      "reason": "v3.1 public specification superseded by the 2026-09-21 relaunch checkpoint",
+      "superseded_by": "docs/LAUNCH_PLAN.md"
+    }
+  ]
+}

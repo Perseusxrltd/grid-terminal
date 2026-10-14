@@ -1,3 +1,5 @@
+> **Superseded (2026-10-14).** Archived v3.1 public specification. Not a current claim, not a live system, and not a funding instruction. Current public status: [relaunch checkpoint](../../RELAUNCH_CHECKPOINT_2026-09-21.md) and [launch plan](../../LAUNCH_PLAN.md).
+
 # Guardian Nodes
 
 > Current Status: public specification; not an active live-economy claim. Guardian Node bonding, slashing, emissions, arbitration fees, and service fees are staged until canonical mint, treasury, and operator readiness are verified by `grid-core`.

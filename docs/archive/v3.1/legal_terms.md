@@ -1,3 +1,5 @@
+> **Superseded (2026-10-14).** Archived v3.1 public specification. Not a current claim, not a live system, and not a funding instruction. Current public status: [relaunch checkpoint](../../RELAUNCH_CHECKPOINT_2026-09-21.md) and [launch plan](../../LAUNCH_PLAN.md).
+
 # LEGAL TERMS & DISCLOSURES
 
 The $GRID protocol and the Sovereign Swarm intelligence layer are experimental decentralized technologies. Participation in the network via Guardian Nodes or $GRID ownership involves significant technical and market risks.
