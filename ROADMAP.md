@@ -1,100 +1,40 @@
+---
+id: roadmap
+title: Roadmap
+release: R0
+status: specified
+canonicalSource: ROADMAP.md
+updatedAt: 2026-10-14
+implementationRefs: []
+limitations: Undated gate table. A row is not reached because time has passed. No module below the documentation stage is active.
+---
+
 # Roadmap
 
-> **The Path to Agent Sovereignty**
+> Current Status: public specification; not an active live-economy claim.
 
----
+These are gates, not dates. A stage is open only when its evidence exists. No row on this page is a schedule, a forecast, or an offer.
 
-## ✅ Phase 0: Origin (February 2026)
-*OpenClaw USDC Hackathon — Proof of Concept*
+| Gate | What will be true | Evidence required | Still inactive at this gate |
+|---|---|---|---|
+| R0: restoration and canon | One public scope, archived legacy claims, and unknown facts labeled unknown | This repository's active documents and boundary checks | Every live-economy and mainnet-readiness claim |
+| R1: new public devnet | Register, scope test-asset authority, accept or deny an action, verify a receipt, revoke | Real devnet transactions and negative tests | Trading real assets, insurance, passive returns, paid licenses |
+| R2: launch candidate | Mint, allocation, fee accounting, vesting, and liquidity lock rehearsed | Simulation package, release gates, sealed inputs, truthful site | Unreleased governance, oracle, bridge, or custody promises |
+| R3: public mainnet token | Fixed-supply token and reviewed registry, receipt, and policy-vault use | Fresh mint, authority proof, lock proof, reconciliation | Transfer policing, return promises, automated penalties |
+| R4: governance and bonded participation | Lock, vote, propose, timelock, execute, and a free verifier pilot | Custody review and the [governance](docs/roadmap/governance.md) and [Guardian](docs/roadmap/guardians.md) dependencies | Insurance liability, redemption, treasury betting, license sales |
+| R5: service economy | Adapters, tool authorization, stable-asset payments, and bounded work escrow | Payment tests and the [knowledge and work](docs/roadmap/knowledge-workflows.md) dependencies | Arbitrary remote tool execution |
+| R6: funded liability pilot | A narrow compensation experiment with real reserves and objective triggers | Counsel, funding, and the [liability](docs/roadmap/liability.md) dependencies | Broad coverage or binding judgments |
+| R7: mature economic jurisdiction | Wider liability arrangements, disputes, attestations, verifiers, and shared knowledge | A ratified spec, independent validation, and measured demand for each module | Treating a research note as infrastructure |
 
-- [x] $GRID Token deployed (Devnet, Token-2022)
-- [x] Transfer Hook deployed (Devnet)
-- [x] Agent Identity Registry spec
-- [x] Constitutional governance framework
-- [x] x402 Protocol specification
+## Activation contracts
 
----
+| Module | Thesis | Contract |
+|---|---|---|
+| Governance and bonds | Mutable parameters and opt-in escrow, without a vote that rewrites immutable mint rules | [docs/roadmap/governance.md](docs/roadmap/governance.md) |
+| Guardian verification | Independent retrieval, free pilot, no license sale | [docs/roadmap/guardians.md](docs/roadmap/guardians.md) |
+| Liability and disputes | Separately funded coverage and nonbinding trials until terms exist | [docs/roadmap/liability.md](docs/roadmap/liability.md) |
+| Knowledge and work | Private records, shared budgets, tested adapters | [docs/roadmap/knowledge-workflows.md](docs/roadmap/knowledge-workflows.md) |
 
-## 🚀 Phase 1: Minimal Viable Jurisdiction (Q1 2026)
+Identity, policy vaults, and receipts are the R1 foundation. They are specified in the [protocol overview](docs/protocol/overview.md) and are not activated by this table.
 
-**Goal:** Ship the 4 primitives that make Sovereign Swarm defensible.
-
-| Milestone | Target | Status |
-|-----------|--------|--------|
-| Agent Passport Minting (Token-2022) | March 2026 | 🔴 Pending |
-| Transfer Hook Enforcement (Kill Switch) | March 2026 | 🔴 Pending |
-| Forensic Logging SDK | April 2026 | 🔴 Pending |
-| Risk Vault (Basic Staking) | April 2026 | 🔴 Pending |
-
-**Deliverables:**
-- Soulbound NFT minting via Token-2022 `NonTransferable` extension
-- `@sovereign-swarm/sdk` (Node.js logging middleware)
-- Transfer Hook that reads Passport status to block suspended agents
-- Simple $GRID staking vault (no payouts yet)
-
----
-
-## 📈 Phase 2: Parametric Insurance (Q2 2026)
-
-**Goal:** Make agent risk priceable and insurable.
-
-| Milestone | Target | Status |
-|-----------|--------|--------|
-| Switchboard Oracle Trigger | May 2026 | 🔴 Pending |
-| Insurance Payout Logic | June 2026 | 🔴 Pending |
-| OpenClaw Compliance Plugin | June 2026 | 🔴 Pending |
-| Fee Sweep to Insurance Reserve | July 2026 | 🔴 Pending |
-
-**Deliverables:**
-- Switchboard Functions (TEE) monitoring agent behavior
-- Automatic slash-and-payout on objective faults
-- `@sovereign-swarm/openclaw-plugin` npm package
-
----
-
-## 🏛️ Phase 3: Constitutional Arbitration (Q3 2026)
-
-**Goal:** Build the judicial layer for disputes code cannot resolve.
-
-| Milestone | Target | Status |
-|-----------|--------|--------|
-| Arbitration DAO (Jury Selection) | August 2026 | 🔴 Pending |
-| ZK Capability Proofs | September 2026 | 🔴 Pending |
-| EU AI Act Compliance Dashboard | October 2026 | 🔴 Pending |
-
-**Deliverables:**
-- Randomized, stake-weighted jury selection from veGRID holders
-- ZK proofs for agent compliance (Proof of Logic, Proof of Solvency)
-- Auditor-facing dashboard for exploring Arweave logs + On-chain passports
-
----
-
-## 🌐 Phase 4: Agent Legal Entity (2027+)
-
-**Goal:** Bridge on-chain jurisdiction to real-world legal structures.
-
-| Milestone | Target | Status |
-|-----------|--------|--------|
-| Agent Economic Entity Framework | Q1 2027 | 🔴 Pending |
-| Cross-Jurisdiction Recognition | Q2 2027 | 🔴 Pending |
-| Full Reinsurance Market | Q3 2027 | 🔴 Pending |
-
-**Deliverables:**
-- Legal counsel validation of Agent LLC/DAO wrappers
-- Multi-chain identity bridging (EVM ↔ SVM)
-- Institutional-grade insurance underwriting
-
----
-
-## Success Metrics
-
-| Metric | Phase 1 | Phase 2 | Phase 3 |
-|--------|---------|---------|---------|
-| Agent Passports Minted | 1,000 | 10,000 | 50,000 |
-| Staked $GRID (TVL) | $500K | $5M | $10M |
-| Forensic Log Uptime | 99.9% | 99.99% | 99.99% |
-| Insurance Claims Resolved | 0 | 100 | 1,000 |
-
----
-
-*Built for the Sovereign Jurisdiction | February 2026*
+No funding address is authorized by this roadmap.

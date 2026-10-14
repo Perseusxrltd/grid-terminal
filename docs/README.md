@@ -29,6 +29,11 @@ No funding address is authorized by these documents. GRID is runtime-neutral. Mo
 | [Constitution](protocol/constitution.md) | R0 | specified | Five laws and the law-versus-program-guarantee table |
 | [Launch plan](LAUNCH_PLAN.md) | R0 | specified | Release stages as gates, not dates |
 | [Relaunch checkpoint](RELAUNCH_CHECKPOINT_2026-09-21.md) | R0 | specified | September 21 planning note |
+| [Roadmap](../ROADMAP.md) | R0 | specified | Undated R0–R7 gate table |
+| [Governance](roadmap/governance.md) | R0 | specified | R4 voting and bond dependencies |
+| [Guardians](roadmap/guardians.md) | R0 | specified | Free verifier pilot dependencies |
+| [Liability](roadmap/liability.md) | R0 | specified | Funded-pilot dependencies; no active insurance |
+| [Knowledge and work](roadmap/knowledge-workflows.md) | R0 | specified | Private records, budget reservations, adapters |
 
 ## Not published yet
 
@@ -39,8 +44,6 @@ These paths are reserved. They do not exist until the release that can describe 
 - `docs/build/quickstart.md`, `docs/build/sdk.md`, `docs/build/runtime-adapters.md`
 - `docs/operations/status.md`, `docs/operations/security.md`
 - `docs/legal/terms.md`, `docs/legal/privacy.md`
-
-Roadmap activation contracts are added with the roadmap task that follows this index. Until that file exists, do not read the repository-root roadmap as a current schedule.
 
 ## Archive
 

@@ -304,4 +304,36 @@ describe('GRID terminal public release boundary', () => {
     }
     assert.deepEqual(violations, []);
   });
+
+  it('publishes an undated roadmap whose rows are gates', () => {
+    const bodyAfterFrontmatter = (relativePath) => readText(relativePath).replace(/^---\n[\s\S]*?\n---\n/, '');
+    const roadmap = readText('ROADMAP.md');
+    const roadmapBody = bodyAfterFrontmatter('ROADMAP.md');
+    assert.match(roadmap, /These are gates, not dates/);
+    assert.match(roadmap, /Current Status: public specification; not an active live-economy claim\./);
+    for (const gate of ['R0:', 'R1:', 'R2:', 'R3:', 'R4:', 'R5:', 'R6:', 'R7:']) {
+      assert.match(roadmap, new RegExp(gate.replace(':', '\\:')));
+    }
+    const dated = /\b(January|February|March|April|May|June|July|August|September|October|November|December)\b|\bQ[1-4]\b|\b20\d{2}\b/;
+    for (const contract of [
+      'docs/roadmap/governance.md',
+      'docs/roadmap/guardians.md',
+      'docs/roadmap/liability.md',
+      'docs/roadmap/knowledge-workflows.md',
+    ]) {
+      assert.match(roadmap, new RegExp(contract.replaceAll('.', '\\.')));
+      const text = readText(contract);
+      const body = bodyAfterFrontmatter(contract);
+      assert.match(text, /Activation dependencies/);
+      assert.match(text, /What stays disabled/);
+      assert.doesNotMatch(body, /\bpending\b/i);
+      assert.doesNotMatch(body, dated);
+    }
+    assert.doesNotMatch(roadmapBody, /\bpending\b/i);
+    assert.doesNotMatch(roadmapBody, dated);
+    assert.match(readText('docs/roadmap/governance.md'), /Stake is not insurance/);
+    assert.match(readText('docs/roadmap/guardians.md'), /No license is sold/);
+    assert.match(readText('docs/roadmap/liability.md'), /No insurance is active/);
+    assert.match(readText('docs/roadmap/knowledge-workflows.md'), /They are not proof that the content is true/);
+  });
 });
