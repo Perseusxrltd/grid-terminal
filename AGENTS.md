@@ -44,6 +44,11 @@ When a task spans repos, verify implementation behavior in `grid-core` first, pu
 - Treat example configs and placeholders cautiously; they may be stale, illustrative, or production-like without being current.
 - Do not instruct agents to hand-edit copied docs in web repos as the primary fix path.
 
+## Launch Plan
+
+- The public, sanitized launch plan is `docs/LAUNCH_PLAN.md`. Update it at each release stage; never add private findings, addresses outside a release manifest, private-repo links or funding instructions (`scripts/verify-boundaries.mjs` enforces this).
+- `main` is the only long-lived branch. Work arrives through short-lived PR branches; nothing historical is kept as a branch in this public repo.
+
 ## Known Drift
 
 - `grid-terminal` and `grid-core` are only partially mirrored and are not a strict 1:1 pair.

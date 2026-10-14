@@ -5,6 +5,10 @@ Autonomy with accountability. A protocol project for accountable agent activity 
 > **PUBLIC RELEASE STATUS**: This repository is the public/sanitized GRID release layer. Canonical implementation truth lives in `grid-core`.
 > Current Status: public specification; not an active live-economy claim.
 
+## Launch plan — October 14, 2026
+
+The execution plan is fixed and published in sanitized form: [public launch plan](docs/LAUNCH_PLAN.md). It lists the release stages (gates, not dates), the selected direction and the documentation work in this repository. Nothing in it is live yet.
+
 ## Relaunch planning checkpoint — September 21, 2026
 
 The full-project review and implementation plan are complete. The rebuild is not complete. This is a documentation-only planning checkpoint, not a new software release, verified devnet deployment, new website, token launch, or invitation to fund a wallet.
@@ -33,6 +37,7 @@ GRID is runtime-neutral. MoltHub is an inactive historical integration, not a re
 
 ## Start here
 
+- [Public launch plan and release stages](docs/LAUNCH_PLAN.md)
 - [Current relaunch direction and release gates](docs/RELAUNCH_CHECKPOINT_2026-09-21.md)
 - [Historical constitutional specification](docs/CONSTITUTION.md)
 - [Historical whitepaper v3.1](docs/SOVEREIGN_SWARM_WHITEPAPER_V3.1.md)

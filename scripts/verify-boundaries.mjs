@@ -80,6 +80,20 @@ describe('GRID terminal public release boundary', () => {
     }
   });
 
+  it('keeps the public launch plan staged, sanitized and free of funding instructions', () => {
+    const plan = readText('docs/LAUNCH_PLAN.md');
+    assertFutureSpecDisclaimer('docs/LAUNCH_PLAN.md');
+    assert.match(plan, /No funding address is authorized by this plan/);
+    assert.match(plan, /MoltHub is an inactive historical integration/);
+    assert.match(plan, /runtime-neutral/);
+    assert.match(plan, /gates, not promised dates/);
+    assert.doesNotMatch(plan, /[A-Za-z]:\\Users\\|-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|(?:secret|private|signing)[_-]?key\s*[:=]/i);
+    assert.doesNotMatch(plan, /github\.com\/[^/]+\/(grid-core|grid-admin|grid-interface)/i);
+    assert.doesNotMatch(plan, /\b[1-9A-HJ-NP-Za-km-z]{32,44}\b/);
+    assert.doesNotMatch(plan, /Compliance-Ready|400MS FINALITY|JOIN THE JURISDICTION/i);
+    assert.match(readText('README.md'), /docs\/LAUNCH_PLAN\.md/);
+  });
+
   it('marks Open-Source Code as derivative and sanitized', () => {
     for (const file of ['Open-Source Code/README.md', 'Open-Source Code/README_OPENSOURCE.md']) {
       const content = readText(file);
