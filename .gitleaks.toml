@@ -1,0 +1,10 @@
+title = "GRID secret scanning"
+
+[extend]
+useDefault = true
+
+[[rules]]
+id = "solana-keypair-json-array"
+description = "64-byte Solana keypair serialized as a JSON number array"
+regex = '''\[\s*(?:\d{1,3}\s*,\s*){63}\d{1,3}\s*\]'''
+tags = ["key", "solana"]

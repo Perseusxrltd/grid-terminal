@@ -1,0 +1,23 @@
+[
+  {
+    "RuleID": "generic-api-key",
+    "Description": "Detected a Generic API Key, potentially exposing access to various services and sensitive operations.",
+    "StartLine": 14,
+    "EndLine": 15,
+    "StartColumn": 87,
+    "EndColumn": 50,
+    "Match": "REDACTED",
+    "Secret": "REDACTED",
+    "File": "Source Code/README_OPENSOURCE.md",
+    "SymlinkFile": "",
+    "Commit": "dfa377d94a26fdec8cf08e1770ae0c3d45d0c577",
+    "Link": "https://github.com/Perseusxrltd/grid-terminal/blob/dfa377d94a26fdec8cf08e1770ae0c3d45d0c577/Source%20Code/README_OPENSOURCE.md?plain=1#L14-L15",
+    "Entropy": 4.8059115,
+    "Author": "PerseusXR",
+    "Email": "jorquera.quentin@gmail.com",
+    "Date": "2026-02-11T04:38:47Z",
+    "Message": "Initial Public Release: V3.1 Sanitized",
+    "Tags": [],
+    "Fingerprint": "dfa377d94a26fdec8cf08e1770ae0c3d45d0c577:Source Code/README_OPENSOURCE.md:generic-api-key:14"
+  }
+]
