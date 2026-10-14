@@ -32,6 +32,18 @@ test-ledger/
 vault.json
 wallet.json
 **/auth/*.json
+.env.*
+!.env.example
+*keypair*.json
+id.json
+deploy-wallet.json
+deployer-key.json
+**/CRITICAL_KEYS_DO_NOT_SHARE/
+.secrets/
+models.json
+auth-profiles.json
+*.db
+.storage/
 
 # Windows
 desktop.ini
